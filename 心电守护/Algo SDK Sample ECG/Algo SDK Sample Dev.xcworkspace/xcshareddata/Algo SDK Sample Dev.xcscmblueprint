@@ -1,0 +1,37 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "516697706E95E9C84EA1BBC1372D9DF47CD1A669",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "D4A1D4C39DC4A9190075ECD77B7EA81774C69C30" : 0,
+    "516697706E95E9C84EA1BBC1372D9DF47CD1A669" : 0,
+    "A32EFEE479D95BCF301E6584B1F8155D487C4865" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "14C33887-A859-443E-8574-090907806601",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "D4A1D4C39DC4A9190075ECD77B7EA81774C69C30" : "Project_C_Lib\/",
+    "516697706E95E9C84EA1BBC1372D9DF47CD1A669" : "Project_SDK\/",
+    "A32EFEE479D95BCF301E6584B1F8155D487C4865" : "Project_ECG\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Algo SDK Sample Dev",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Algo_SDK\/Source\/Platforms\/iOS\/Algo SDK Sample ECG\/Algo SDK Sample Dev.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "neurosky.synology.me:\/volume1\/git_repos\/Project_SDK",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "516697706E95E9C84EA1BBC1372D9DF47CD1A669"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "ssh:\/\/neurosky.synology.me:\/volume1\/git_repos\/Project_ECG",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A32EFEE479D95BCF301E6584B1F8155D487C4865"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "ssh:\/\/neurosky.synology.me:\/volume1\/git_repos\/Project_C_Lib",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D4A1D4C39DC4A9190075ECD77B7EA81774C69C30"
+    }
+  ]
+}

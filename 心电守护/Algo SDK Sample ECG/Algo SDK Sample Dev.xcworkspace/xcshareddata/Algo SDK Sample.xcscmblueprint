@@ -1,0 +1,43 @@
+{
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "D4A1D4C39DC4A9190075ECD77B7EA81774C69C30" : 0,
+    "A32EFEE479D95BCF301E6584B1F8155D487C4865" : 0,
+    "F3AE659F50459F45E72BD8FB60BD716F8A01B00E" : 0,
+    "516697706E95E9C84EA1BBC1372D9DF47CD1A669" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "3FBBD19F-2446-4FCE-B9D0-6A8E7F30F8B6",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "D4A1D4C39DC4A9190075ECD77B7EA81774C69C30" : "Project_C_Lib\/",
+    "A32EFEE479D95BCF301E6584B1F8155D487C4865" : "Project_ECG\/",
+    "F3AE659F50459F45E72BD8FB60BD716F8A01B00E" : "..\/bitbucket\/nsk-algo-sdk-ecg-ios",
+    "516697706E95E9C84EA1BBC1372D9DF47CD1A669" : "Project_SDK\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Algo SDK Sample",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SDK\/Algo\/Source\/Platforms\/iOS\/Algo SDK Sample\/Algo SDK Sample.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "neurosky.synology.me:\/volume1\/git_repos\/Project_SDK",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "516697706E95E9C84EA1BBC1372D9DF47CD1A669"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "ssh:\/\/neurosky.synology.me:\/volume1\/git_repos\/Project_ECG",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A32EFEE479D95BCF301E6584B1F8155D487C4865"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "ssh:\/\/neurosky.synology.me:\/volume1\/git_repos\/Project_C_Lib",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D4A1D4C39DC4A9190075ECD77B7EA81774C69C30"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/nsk_algsdk\/nsk-algo-sdk-ecg-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F3AE659F50459F45E72BD8FB60BD716F8A01B00E"
+    }
+  ]
+}

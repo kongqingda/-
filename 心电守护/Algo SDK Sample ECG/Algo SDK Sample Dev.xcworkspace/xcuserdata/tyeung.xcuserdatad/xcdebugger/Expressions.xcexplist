@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "algo_callback:Algorithm_Manager.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "&amp;msgList[qp]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "np_memcpy:NSK_Algo_Porting.c">
+      </ContextState>
+      <ContextState
+         contextName = "-[NskAlgoSdk getProfiles]:NskAlgoSdk.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[MultiLineGraphView refreshDim]:MultiLineGraphView.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[self frame]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "set_profile:config_module.c">
+      </ContextState>
+      <ContextState
+         contextName = "nsk_ecg_set_raw_sample_rate:nsk_ecg_core.c">
+      </ContextState>
+      <ContextState
+         contextName = "config_get_profiles:config_module.c">
+      </ContextState>
+      <ContextState
+         contextName = "-[ViewController ecgAlgoValue:ecg_value:ECG_valid:]:ViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[NskAlgoSdk updateProfile:]:NskAlgoSdk.m">
+      </ContextState>
+      <ContextState
+         contextName = "np_queueReceive:NSK_Algo_Porting.c">
+      </ContextState>
+      <ContextState
+         contextName = "nel_compute_hr:nsk_ecg_core_state.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "rri[NEL_N_RR-n]">
+            </PersistentString>
+            <PersistentString
+               value = "yy[2]">
+            </PersistentString>
+            <PersistentString
+               value = "yy[0]">
+            </PersistentString>
+            <PersistentString
+               value = "rri[255]">
+            </PersistentString>
+            <PersistentString
+               value = "yy[3]">
+            </PersistentString>
+            <PersistentString
+               value = "yy[1]">
+            </PersistentString>
+            <PersistentString
+               value = "sizeof(int16_t)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "nel_update:nsk_ecg_core_state.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "rri[255]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "np_queueSend:NSK_Algo_Porting.c">
+      </ContextState>
+      <ContextState
+         contextName = "CSVToInt16:config_module.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "*pstr">
+            </PersistentString>
+            <PersistentString
+               value = "data[127]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "config_set_profile:config_module.c">
+      </ContextState>
+      <ContextState
+         contextName = "-[NskAlgoSdk setAlgorithmTypes:]:NskAlgoSdk.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[ViewController viewDidLoad]:ViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "updateAlgoResult:ECG_Layer.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "&amp;gDataStateSQ.lastRRI">
+            </PersistentString>
+            <PersistentString
+               value = "&amp;(gAlgoEnable.hr)">
+            </PersistentString>
+            <PersistentString
+               value = "gAlgoEnable.hr">
+            </PersistentString>
+            <PersistentString
+               value = "&amp;(gDataStateSQ.lastRRI)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MultiLineGraphContext pushValue:index:]:MultiLineGraphContext.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "data[0]">
+            </PersistentString>
+            <PersistentString
+               value = "xMax">
+            </PersistentString>
+            <PersistentString
+               value = "[self xCompressRate]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ViewController configureProfile]:ViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "NSK_ALGO_Profile:NSK_Algo.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "(*ppProfileList)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
