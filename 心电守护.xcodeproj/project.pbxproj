@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D313F356B2419F817AC0A97 /* Pods_____.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD10F89645379768FAE8E436 /* Pods_____.framework */; };
 		9D0088BD1F4E7A78001CC7E9 /* DrawLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0088BC1F4E7A78001CC7E9 /* DrawLineView.swift */; };
+		9D06DCFC1F9DCF2100D4BC28 /* XMPPUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D06DCFB1F9DCF2100D4BC28 /* XMPPUtil.swift */; };
+		9D06DD1B1F9DD4D400D4BC28 /* Pods_____.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DD10F89645379768FAE8E436 /* Pods_____.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9D0F9C351F5CEC880058BDEF /* CalendarDataSources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0F9C341F5CEC880058BDEF /* CalendarDataSources.swift */; };
 		9D11E1C41F8CA501007BCA13 /* start1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D11E1BA1F8CA500007BCA13 /* start1@3x.png */; };
 		9D11E1CB1F8CB7B5007BCA13 /* battery_full.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D11E1C51F8CB7B2007BCA13 /* battery_full.png */; };
@@ -59,6 +62,21 @@
 		9D1801DB1F90C20B004C82B9 /* 绑定图标.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D1801D81F90C1B1004C82B9 /* 绑定图标.png */; };
 		9D1801DC1F90C20B004C82B9 /* 绑定图标@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D1801D91F90C1D7004C82B9 /* 绑定图标@3x.png */; };
 		9D1801DD1F90C20B004C82B9 /* 绑定图标@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D1801DA1F90C207004C82B9 /* 绑定图标@2x.png */; };
+		9D1F49411FAAAD4200E7E2FD /* 日历背景@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D1F49351FAAAD3100E7E2FD /* 日历背景@2x.png */; };
+		9D1F49421FAAAD4200E7E2FD /* 日历背景.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D1F493F1FAAAD3900E7E2FD /* 日历背景.png */; };
+		9D1F49431FAAAD4200E7E2FD /* 日历背景@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D1F49401FAAAD3D00E7E2FD /* 日历背景@3x.png */; };
+		9D1F494A1FAAAD6200E7E2FD /* 左翻@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D1F49441FAAAD4600E7E2FD /* 左翻@2x.png */; };
+		9D1F494B1FAAAD6200E7E2FD /* 右翻.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D1F49451FAAAD4B00E7E2FD /* 右翻.png */; };
+		9D1F494C1FAAAD6200E7E2FD /* 左翻.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D1F49461FAAAD4F00E7E2FD /* 左翻.png */; };
+		9D1F494D1FAAAD6200E7E2FD /* 右翻@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D1F49471FAAAD5400E7E2FD /* 右翻@2x.png */; };
+		9D1F494E1FAAAD6200E7E2FD /* 左翻@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D1F49481FAAAD5800E7E2FD /* 左翻@3x.png */; };
+		9D1F494F1FAAAD6200E7E2FD /* 右翻@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D1F49491FAAAD5D00E7E2FD /* 右翻@3x.png */; };
+		9D1F49561FAAB49A00E7E2FD /* 绑定图标-手表.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D1F49501FAAB47500E7E2FD /* 绑定图标-手表.png */; };
+		9D1F49571FAAB49A00E7E2FD /* 绑定图标-TH902@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D1F49511FAAB47B00E7E2FD /* 绑定图标-TH902@3x.png */; };
+		9D1F49581FAAB49A00E7E2FD /* 绑定图标-TH902.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D1F49521FAAB48100E7E2FD /* 绑定图标-TH902.png */; };
+		9D1F49591FAAB49A00E7E2FD /* 绑定图标-手表@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D1F49531FAAB48700E7E2FD /* 绑定图标-手表@2x.png */; };
+		9D1F495A1FAAB49A00E7E2FD /* 绑定图标-手表@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D1F49541FAAB48C00E7E2FD /* 绑定图标-手表@3x.png */; };
+		9D1F495B1FAAB49A00E7E2FD /* 绑定图标-TH902@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D1F49551FAAB49400E7E2FD /* 绑定图标-TH902@2x.png */; };
 		9D3467741F41ABA50024E726 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3467731F41ABA50024E726 /* AppDelegate.swift */; };
 		9D3467761F41ABA50024E726 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3467751F41ABA50024E726 /* FirstViewController.swift */; };
 		9D3467781F41ABA60024E726 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3467771F41ABA60024E726 /* SecondViewController.swift */; };
@@ -118,18 +136,44 @@
 		9D3D09D31F452F6E005D4569 /* bangding.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D3D09D01F452F6E005D4569 /* bangding.png */; };
 		9D3D09D41F452F6E005D4569 /* bangding@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D3D09D11F452F6E005D4569 /* bangding@2x.png */; };
 		9D3D09D51F452F6E005D4569 /* bangding@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D3D09D21F452F6E005D4569 /* bangding@3x.png */; };
+		9D514E731FB2D724005EE141 /* Usermsgmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D514E721FB2D724005EE141 /* Usermsgmodel.swift */; };
+		9D514E751FB2D9DB005EE141 /* UsermsgDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D514E741FB2D9DB005EE141 /* UsermsgDao.swift */; };
+		9D514E771FB31067005EE141 /* DrawPointView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D514E761FB31067005EE141 /* DrawPointView.swift */; };
+		9D54D2181FAAC9E500E38326 /* UserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D54D2171FAAC9E500E38326 /* UserTableViewController.swift */; };
+		9D54D2231FAACA1900E38326 /* UserCaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D54D2221FAACA1900E38326 /* UserCaseViewController.swift */; };
+		9D6824281F9F49C600DD9192 /* DiagnosisMsgDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6824271F9F49C600DD9192 /* DiagnosisMsgDao.swift */; };
+		9D68242A1F9F4B4100DD9192 /* diagnosismsg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6824291F9F4B4100DD9192 /* diagnosismsg.swift */; };
+		9D68544A1FB18EB900DF1502 /* 导航4@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D6854361FB18EB400DF1502 /* 导航4@3x.png */; };
+		9D68544B1FB18EB900DF1502 /* 导航1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D6854371FB18EB500DF1502 /* 导航1@3x.png */; };
+		9D68544C1FB18EB900DF1502 /* 导航4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D6854381FB18EB500DF1502 /* 导航4@2x.png */; };
+		9D68544E1FB18EB900DF1502 /* 导航3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D68543A1FB18EB600DF1502 /* 导航3@2x.png */; };
+		9D68544F1FB18EB900DF1502 /* 导航4.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D68543B1FB18EB600DF1502 /* 导航4.png */; };
+		9D6854511FB18EBA00DF1502 /* 导航3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D68543D1FB18EB700DF1502 /* 导航3.png */; };
+		9D6854521FB18EBA00DF1502 /* 导航1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D68543E1FB18EB700DF1502 /* 导航1.png */; };
+		9D6854531FB18EBA00DF1502 /* 导航2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D68543F1FB18EB700DF1502 /* 导航2.png */; };
+		9D6854551FB18EBA00DF1502 /* 导航1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D6854411FB18EB800DF1502 /* 导航1@2x.png */; };
+		9D6854571FB18EBA00DF1502 /* 导航1@3x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9D6854431FB18EB800DF1502 /* 导航1@3x.jpg */; };
+		9D6854581FB18EBA00DF1502 /* 导航3@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D6854441FB18EB900DF1502 /* 导航3@3x.png */; };
+		9D68545A1FB18EBA00DF1502 /* 导航2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D6854461FB18EB900DF1502 /* 导航2@2x.png */; };
+		9D68545B1FB18EBA00DF1502 /* 导航2@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D6854471FB18EB900DF1502 /* 导航2@3x.png */; };
 		9D68632D1F78D7D90076B335 /* StreamSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D6863281F78D79A0076B335 /* StreamSDK.a */; };
 		9D68633C1F78DD420076B335 /* AlgoSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D6863311F78DCFD0076B335 /* AlgoSdk.framework */; };
 		9D68633D1F78DDB00076B335 /* AlgoSdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9D6863311F78DCFD0076B335 /* AlgoSdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9D6863401F7907C40076B335 /* ECGAlgo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D68633F1F7907C40076B335 /* ECGAlgo.swift */; };
+		9D714E851FA8759D00E86D4B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D714E781FA8758900E86D4B /* Alamofire.framework */; };
+		9D714E861FA8759D00E86D4B /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9D714E781FA8758900E86D4B /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9D714EB81FA87B9200E86D4B /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D714EAB1FA8798F00E86D4B /* Charts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		9D714EB91FA87CB000E86D4B /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9D714EAB1FA8798F00E86D4B /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9D714EC81FA87F5300E86D4B /* BalloonMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D714EC41FA87F5300E86D4B /* BalloonMarker.swift */; };
+		9D714EC91FA87F5300E86D4B /* RadarMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D714EC51FA87F5300E86D4B /* RadarMarkerView.swift */; };
+		9D714ECA1FA87F5300E86D4B /* RadarMarkerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D714EC61FA87F5300E86D4B /* RadarMarkerView.xib */; };
+		9D714ECB1FA87F5300E86D4B /* XYMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D714EC71FA87F5300E86D4B /* XYMarkerView.swift */; };
+		9D714ECD1FA8810300E86D4B /* xvalueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D714ECC1FA8810300E86D4B /* xvalueFormatter.swift */; };
 		9D7631321F551C2C0049DF9B /* netUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7631311F551C2C0049DF9B /* netUtil.swift */; };
-		9D7631331F55398F0049DF9B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D7631191F5518BA0049DF9B /* Alamofire.framework */; };
-		9D7631341F55398F0049DF9B /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9D7631191F5518BA0049DF9B /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9DA29D0F1F42F1CE003AC361 /* ThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA29D0E1F42F1CE003AC361 /* ThreeViewController.swift */; };
 		9DA29D111F42F1F6003AC361 /* FourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA29D101F42F1F6003AC361 /* FourViewController.swift */; };
 		9DA29D131F42F21A003AC361 /* LoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA29D121F42F21A003AC361 /* LoadViewController.swift */; };
 		9DA29D151F42F22E003AC361 /* ResigerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA29D141F42F22E003AC361 /* ResigerViewController.swift */; };
-		9DA29D171F42F276003AC361 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA29D161F42F276003AC361 /* UserViewController.swift */; };
 		9DA29D191F42F2A0003AC361 /* BindDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA29D181F42F2A0003AC361 /* BindDeviceViewController.swift */; };
 		9DA29D1B1F42F2B4003AC361 /* DeviceUpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA29D1A1F42F2B4003AC361 /* DeviceUpdateViewController.swift */; };
 		9DA29D1D1F42F2DD003AC361 /* SyncDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA29D1C1F42F2DD003AC361 /* SyncDataViewController.swift */; };
@@ -148,14 +192,9 @@
 		9DB13F9A1F6A7843000F0B18 /* setting-拷贝.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DB13F8E1F6A7843000F0B18 /* setting-拷贝.png */; };
 		9DB13F9B1F6A7843000F0B18 /* setting-拷贝@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DB13F8F1F6A7843000F0B18 /* setting-拷贝@2x.png */; };
 		9DB13F9C1F6A7843000F0B18 /* setting-拷贝@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DB13F901F6A7843000F0B18 /* setting-拷贝@3x.png */; };
-		9DB13F9E1F6A7ECF000F0B18 /* calendarlayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB13F9D1F6A7ECF000F0B18 /* calendarlayout.swift */; };
+		9DC4FD461FB15B5600EC9385 /* AboutUsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC4FD451FB15B5600EC9385 /* AboutUsController.swift */; };
+		9DC4FD511FB1639600EC9385 /* AboutSoftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC4FD501FB1639600EC9385 /* AboutSoftViewController.swift */; };
 		9DC8F0921F6902FF0046D59D /* ECGDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC8F0911F6902FF0046D59D /* ECGDataViewController.swift */; };
-		9DD9965D1F7CDC8B00826641 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DD9965A1F7CDC7F00826641 /* Charts.framework */; };
-		9DD9965E1F7CDC9300826641 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9DD9965A1F7CDC7F00826641 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9DD996651F7CDE9F00826641 /* BalloonMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD996611F7CDE9F00826641 /* BalloonMarker.swift */; };
-		9DD996661F7CDE9F00826641 /* RadarMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD996621F7CDE9F00826641 /* RadarMarkerView.swift */; };
-		9DD996671F7CDE9F00826641 /* RadarMarkerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DD996631F7CDE9F00826641 /* RadarMarkerView.xib */; };
-		9DD996681F7CDE9F00826641 /* XYMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD996641F7CDE9F00826641 /* XYMarkerView.swift */; };
 		9DDD296A1F7CC685006172E6 /* radar_marker@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DDD29601F7CC685006172E6 /* radar_marker@3x.png */; };
 		9DDDB8091F4C2F2E00E78E68 /* PreferenceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDDB8081F4C2F2E00E78E68 /* PreferenceData.swift */; };
 		9DE09BE01F8E1C9300656709 /* WatchTimeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE09BDF1F8E1C9300656709 /* WatchTimeController.swift */; };
@@ -192,6 +231,9 @@
 		9DE8817B1F94BAE400E27198 /* 数据包@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DE881781F94BA9200E27198 /* 数据包@2x.png */; };
 		9DE8817C1F94BAE400E27198 /* 数据包@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DE881791F94BAB300E27198 /* 数据包@3x.png */; };
 		9DECA0A01F58FC8A00CDA483 /* FindpwdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DECA09F1F58FC8A00CDA483 /* FindpwdViewController.swift */; };
+		9DEEA2781FA18A820050A5A9 /* ecgmsgViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEEA2771FA18A820050A5A9 /* ecgmsgViewCell.swift */; };
+		9DF29BA41FAFF64D000CB559 /* calendarlayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF29BA31FAFF64D000CB559 /* calendarlayout.swift */; };
+		9DF29BAF1FB046D0000CB559 /* SensorShowData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF29BAE1FB046D0000CB559 /* SensorShowData.swift */; };
 		9DF2A3B21F8F0B6400BEB2B3 /* refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DF2A3821F8F0B6300BEB2B3 /* refresh.png */; };
 		9DF2A3B31F8F0B6400BEB2B3 /* refresh@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DF2A3831F8F0B6300BEB2B3 /* refresh@2x.png */; };
 		9DF2A3B41F8F0B6400BEB2B3 /* refresh@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DF2A3841F8F0B6300BEB2B3 /* refresh@3x.png */; };
@@ -247,9 +289,6 @@
 		9DF4DE611F5E503D00A487DA /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9DF4DE5F1F5E503D00A487DA /* CoreDataModel.xcdatamodeld */; };
 		9DF5ED371F8DC4A9009A0F31 /* icon_ecg.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DF5ED2D1F8DC4A9009A0F31 /* icon_ecg.png */; };
 		9DF69F751F566B2300A12434 /* DrawBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF69F741F566B2300A12434 /* DrawBackView.swift */; };
-		9DF6A27A1F5AACA50056EA2C /* 红点.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DF6A2791F5AACA50056EA2C /* 红点.png */; };
-		9DF6A2831F5AACAF0056EA2C /* 红点@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DF6A2821F5AACAF0056EA2C /* 红点@2x.png */; };
-		9DF6A2851F5AACBB0056EA2C /* 红点@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DF6A2841F5AACBB0056EA2C /* 红点@3x.png */; };
 		9DF6A2881F5AB5F20056EA2C /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF6A2871F5AB5F20056EA2C /* CalendarCell.swift */; };
 		9DFA50A61F661B7C00BECBB8 /* DeviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFA50A51F661B7C00BECBB8 /* DeviceCell.swift */; };
 		9DFE2AA71F6B6E9300979472 /* OtherSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFE2AA61F6B6E9300979472 /* OtherSetViewController.swift */; };
@@ -273,72 +312,72 @@
 			remoteGlobalIDString = 9D34676F1F41ABA50024E726;
 			remoteInfo = "心电守护";
 		};
-		9D7631181F5518BA0049DF9B /* PBXContainerItemProxy */ = {
+		9D714E771FA8758900E86D4B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9D76310D1F5518B90049DF9B /* Alamofire.xcodeproj */;
+			containerPortal = 9D714E6C1FA8758800E86D4B /* Alamofire.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
 			remoteInfo = "Alamofire iOS";
 		};
-		9D76311A1F5518BA0049DF9B /* PBXContainerItemProxy */ = {
+		9D714E791FA8758900E86D4B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9D76310D1F5518B90049DF9B /* Alamofire.xcodeproj */;
+			containerPortal = 9D714E6C1FA8758800E86D4B /* Alamofire.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
 			remoteInfo = "Alamofire iOS Tests";
 		};
-		9D76311C1F5518BA0049DF9B /* PBXContainerItemProxy */ = {
+		9D714E7B1FA8758900E86D4B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9D76310D1F5518B90049DF9B /* Alamofire.xcodeproj */;
+			containerPortal = 9D714E6C1FA8758800E86D4B /* Alamofire.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 4DD67C0B1A5C55C900ED2280;
 			remoteInfo = "Alamofire macOS";
 		};
-		9D76311E1F5518BA0049DF9B /* PBXContainerItemProxy */ = {
+		9D714E7D1FA8758900E86D4B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9D76310D1F5518B90049DF9B /* Alamofire.xcodeproj */;
+			containerPortal = 9D714E6C1FA8758800E86D4B /* Alamofire.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = F829C6B21A7A94F100A2CD59;
 			remoteInfo = "Alamofire macOS Tests";
 		};
-		9D7631201F5518BA0049DF9B /* PBXContainerItemProxy */ = {
+		9D714E7F1FA8758900E86D4B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9D76310D1F5518B90049DF9B /* Alamofire.xcodeproj */;
+			containerPortal = 9D714E6C1FA8758800E86D4B /* Alamofire.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 4CF626EF1BA7CB3E0011A099;
 			remoteInfo = "Alamofire tvOS";
 		};
-		9D7631221F5518BA0049DF9B /* PBXContainerItemProxy */ = {
+		9D714E811FA8758900E86D4B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9D76310D1F5518B90049DF9B /* Alamofire.xcodeproj */;
+			containerPortal = 9D714E6C1FA8758800E86D4B /* Alamofire.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 4CF626F81BA7CB3E0011A099;
 			remoteInfo = "Alamofire tvOS Tests";
 		};
-		9D7631241F5518BA0049DF9B /* PBXContainerItemProxy */ = {
+		9D714E831FA8758900E86D4B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9D76310D1F5518B90049DF9B /* Alamofire.xcodeproj */;
+			containerPortal = 9D714E6C1FA8758800E86D4B /* Alamofire.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = E4202FE01B667AA100C997FB;
 			remoteInfo = "Alamofire watchOS";
 		};
-		9D7631351F55398F0049DF9B /* PBXContainerItemProxy */ = {
+		9D714E871FA8759D00E86D4B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9D76310D1F5518B90049DF9B /* Alamofire.xcodeproj */;
+			containerPortal = 9D714E6C1FA8758800E86D4B /* Alamofire.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
 			remoteInfo = "Alamofire iOS";
 		};
-		9DD996591F7CDC7F00826641 /* PBXContainerItemProxy */ = {
+		9D714EAA1FA8798F00E86D4B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9DD996541F7CDC7F00826641 /* Charts.xcodeproj */;
+			containerPortal = 9D714EA51FA8798E00E86D4B /* Charts.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 65AD9E95D9ED4DC0BD73A743;
 			remoteInfo = Charts;
 		};
-		9DD9965B1F7CDC7F00826641 /* PBXContainerItemProxy */ = {
+		9D714EAC1FA8798F00E86D4B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9DD996541F7CDC7F00826641 /* Charts.xcodeproj */;
+			containerPortal = 9D714EA51FA8798E00E86D4B /* Charts.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 1CBBC58C6CE1EBEE9852CE41;
 			remoteInfo = ChartsTests;
@@ -352,9 +391,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				9DD9965E1F7CDC9300826641 /* Charts.framework in Embed Frameworks */,
+				9D714EB91FA87CB000E86D4B /* Charts.framework in Embed Frameworks */,
+				9D06DD1B1F9DD4D400D4BC28 /* Pods_____.framework in Embed Frameworks */,
+				9D714E861FA8759D00E86D4B /* Alamofire.framework in Embed Frameworks */,
 				9D68633D1F78DDB00076B335 /* AlgoSdk.framework in Embed Frameworks */,
-				9D7631341F55398F0049DF9B /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,7 +402,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6E46BF1851F726D9BC4CBA62 /* Pods-心电守护.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-心电守护.release.xcconfig"; path = "Pods/Target Support Files/Pods-心电守护/Pods-心电守护.release.xcconfig"; sourceTree = "<group>"; };
 		9D0088BC1F4E7A78001CC7E9 /* DrawLineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawLineView.swift; sourceTree = "<group>"; };
+		9D06DCFB1F9DCF2100D4BC28 /* XMPPUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMPPUtil.swift; sourceTree = "<group>"; };
+		9D06DD171F9DD45C00D4BC28 /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CocoaAsyncSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D06DD181F9DD45C00D4BC28 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CocoaLumberjack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D06DD191F9DD45C00D4BC28 /* KissXML.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = KissXML.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D06DD1A1F9DD45C00D4BC28 /* XMPPFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = XMPPFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D0F9C341F5CEC880058BDEF /* CalendarDataSources.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarDataSources.swift; sourceTree = "<group>"; };
 		9D11E1BA1F8CA500007BCA13 /* start1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "start1@3x.png"; sourceTree = "<group>"; };
 		9D11E1C51F8CB7B2007BCA13 /* battery_full.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = battery_full.png; sourceTree = "<group>"; };
@@ -416,6 +462,21 @@
 		9D1801D81F90C1B1004C82B9 /* 绑定图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "绑定图标.png"; sourceTree = "<group>"; };
 		9D1801D91F90C1D7004C82B9 /* 绑定图标@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "绑定图标@3x.png"; sourceTree = "<group>"; };
 		9D1801DA1F90C207004C82B9 /* 绑定图标@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "绑定图标@2x.png"; sourceTree = "<group>"; };
+		9D1F49351FAAAD3100E7E2FD /* 日历背景@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "日历背景@2x.png"; sourceTree = "<group>"; };
+		9D1F493F1FAAAD3900E7E2FD /* 日历背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "日历背景.png"; sourceTree = "<group>"; };
+		9D1F49401FAAAD3D00E7E2FD /* 日历背景@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "日历背景@3x.png"; sourceTree = "<group>"; };
+		9D1F49441FAAAD4600E7E2FD /* 左翻@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "左翻@2x.png"; sourceTree = "<group>"; };
+		9D1F49451FAAAD4B00E7E2FD /* 右翻.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "右翻.png"; sourceTree = "<group>"; };
+		9D1F49461FAAAD4F00E7E2FD /* 左翻.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "左翻.png"; sourceTree = "<group>"; };
+		9D1F49471FAAAD5400E7E2FD /* 右翻@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "右翻@2x.png"; sourceTree = "<group>"; };
+		9D1F49481FAAAD5800E7E2FD /* 左翻@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "左翻@3x.png"; sourceTree = "<group>"; };
+		9D1F49491FAAAD5D00E7E2FD /* 右翻@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "右翻@3x.png"; sourceTree = "<group>"; };
+		9D1F49501FAAB47500E7E2FD /* 绑定图标-手表.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "绑定图标-手表.png"; sourceTree = "<group>"; };
+		9D1F49511FAAB47B00E7E2FD /* 绑定图标-TH902@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "绑定图标-TH902@3x.png"; sourceTree = "<group>"; };
+		9D1F49521FAAB48100E7E2FD /* 绑定图标-TH902.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "绑定图标-TH902.png"; sourceTree = "<group>"; };
+		9D1F49531FAAB48700E7E2FD /* 绑定图标-手表@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "绑定图标-手表@2x.png"; sourceTree = "<group>"; };
+		9D1F49541FAAB48C00E7E2FD /* 绑定图标-手表@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "绑定图标-手表@3x.png"; sourceTree = "<group>"; };
+		9D1F49551FAAB49400E7E2FD /* 绑定图标-TH902@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "绑定图标-TH902@2x.png"; sourceTree = "<group>"; };
 		9D3467701F41ABA50024E726 /* 心电守护.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "心电守护.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D3467731F41ABA50024E726 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D3467751F41ABA50024E726 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -481,6 +542,30 @@
 		9D3D09D01F452F6E005D4569 /* bangding.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bangding.png; sourceTree = "<group>"; };
 		9D3D09D11F452F6E005D4569 /* bangding@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bangding@2x.png"; sourceTree = "<group>"; };
 		9D3D09D21F452F6E005D4569 /* bangding@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bangding@3x.png"; sourceTree = "<group>"; };
+		9D514E6E1FB2D6F2005EE141 /* UsermsgManager+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UsermsgManager+CoreDataClass.swift"; sourceTree = "<group>"; };
+		9D514E6F1FB2D6F2005EE141 /* UsermsgManager+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UsermsgManager+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		9D514E721FB2D724005EE141 /* Usermsgmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usermsgmodel.swift; sourceTree = "<group>"; };
+		9D514E741FB2D9DB005EE141 /* UsermsgDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsermsgDao.swift; sourceTree = "<group>"; };
+		9D514E761FB31067005EE141 /* DrawPointView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawPointView.swift; sourceTree = "<group>"; };
+		9D54D2171FAAC9E500E38326 /* UserTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewController.swift; sourceTree = "<group>"; };
+		9D54D2221FAACA1900E38326 /* UserCaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCaseViewController.swift; sourceTree = "<group>"; };
+		9D6824181F9F3F7D00DD9192 /* ECGDataManager+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ECGDataManager+CoreDataProperties.swift"; path = "../ECGDataManager+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		9D6824231F9F3F7E00DD9192 /* ECGDataManager+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ECGDataManager+CoreDataClass.swift"; path = "../ECGDataManager+CoreDataClass.swift"; sourceTree = "<group>"; };
+		9D6824271F9F49C600DD9192 /* DiagnosisMsgDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosisMsgDao.swift; sourceTree = "<group>"; };
+		9D6824291F9F4B4100DD9192 /* diagnosismsg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = diagnosismsg.swift; sourceTree = "<group>"; };
+		9D6854361FB18EB400DF1502 /* 导航4@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "导航4@3x.png"; sourceTree = "<group>"; };
+		9D6854371FB18EB500DF1502 /* 导航1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "导航1@3x.png"; sourceTree = "<group>"; };
+		9D6854381FB18EB500DF1502 /* 导航4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "导航4@2x.png"; sourceTree = "<group>"; };
+		9D68543A1FB18EB600DF1502 /* 导航3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "导航3@2x.png"; sourceTree = "<group>"; };
+		9D68543B1FB18EB600DF1502 /* 导航4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "导航4.png"; sourceTree = "<group>"; };
+		9D68543D1FB18EB700DF1502 /* 导航3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "导航3.png"; sourceTree = "<group>"; };
+		9D68543E1FB18EB700DF1502 /* 导航1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "导航1.png"; sourceTree = "<group>"; };
+		9D68543F1FB18EB700DF1502 /* 导航2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "导航2.png"; sourceTree = "<group>"; };
+		9D6854411FB18EB800DF1502 /* 导航1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "导航1@2x.png"; sourceTree = "<group>"; };
+		9D6854431FB18EB800DF1502 /* 导航1@3x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "导航1@3x.jpg"; sourceTree = "<group>"; };
+		9D6854441FB18EB900DF1502 /* 导航3@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "导航3@3x.png"; sourceTree = "<group>"; };
+		9D6854461FB18EB900DF1502 /* 导航2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "导航2@2x.png"; sourceTree = "<group>"; };
+		9D6854471FB18EB900DF1502 /* 导航2@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "导航2@3x.png"; sourceTree = "<group>"; };
 		9D6862CE1F78991D0076B335 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		9D6863281F78D79A0076B335 /* StreamSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = StreamSDK.a; sourceTree = "<group>"; };
 		9D6863291F78D79A0076B335 /* TGStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGStream.h; sourceTree = "<group>"; };
@@ -489,13 +574,18 @@
 		9D6863311F78DCFD0076B335 /* AlgoSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlgoSdk.framework; sourceTree = "<group>"; };
 		9D68633E1F78DE870076B335 /* ECG-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ECG-Bridging-Header.h"; sourceTree = "<group>"; };
 		9D68633F1F7907C40076B335 /* ECGAlgo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ECGAlgo.swift; sourceTree = "<group>"; };
-		9D76310D1F5518B90049DF9B /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "../../Alamofire-master/Alamofire.xcodeproj"; sourceTree = "<group>"; };
+		9D714E6C1FA8758800E86D4B /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Alamofire.xcodeproj; sourceTree = "<group>"; };
+		9D714EA51FA8798E00E86D4B /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "Charts-master-2/Charts.xcodeproj"; sourceTree = "<group>"; };
+		9D714EC41FA87F5300E86D4B /* BalloonMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalloonMarker.swift; sourceTree = "<group>"; };
+		9D714EC51FA87F5300E86D4B /* RadarMarkerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadarMarkerView.swift; sourceTree = "<group>"; };
+		9D714EC61FA87F5300E86D4B /* RadarMarkerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RadarMarkerView.xib; sourceTree = "<group>"; };
+		9D714EC71FA87F5300E86D4B /* XYMarkerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYMarkerView.swift; sourceTree = "<group>"; };
+		9D714ECC1FA8810300E86D4B /* xvalueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xvalueFormatter.swift; sourceTree = "<group>"; };
 		9D7631311F551C2C0049DF9B /* netUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = netUtil.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		9DA29D0E1F42F1CE003AC361 /* ThreeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreeViewController.swift; sourceTree = "<group>"; };
 		9DA29D101F42F1F6003AC361 /* FourViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourViewController.swift; sourceTree = "<group>"; };
 		9DA29D121F42F21A003AC361 /* LoadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadViewController.swift; sourceTree = "<group>"; };
 		9DA29D141F42F22E003AC361 /* ResigerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResigerViewController.swift; sourceTree = "<group>"; };
-		9DA29D161F42F276003AC361 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		9DA29D181F42F2A0003AC361 /* BindDeviceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BindDeviceViewController.swift; sourceTree = "<group>"; };
 		9DA29D1A1F42F2B4003AC361 /* DeviceUpdateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceUpdateViewController.swift; sourceTree = "<group>"; };
 		9DA29D1C1F42F2DD003AC361 /* SyncDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncDataViewController.swift; sourceTree = "<group>"; };
@@ -514,13 +604,9 @@
 		9DB13F8E1F6A7843000F0B18 /* setting-拷贝.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting-拷贝.png"; sourceTree = "<group>"; };
 		9DB13F8F1F6A7843000F0B18 /* setting-拷贝@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting-拷贝@2x.png"; sourceTree = "<group>"; };
 		9DB13F901F6A7843000F0B18 /* setting-拷贝@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting-拷贝@3x.png"; sourceTree = "<group>"; };
-		9DB13F9D1F6A7ECF000F0B18 /* calendarlayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = calendarlayout.swift; sourceTree = "<group>"; };
+		9DC4FD451FB15B5600EC9385 /* AboutUsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsController.swift; sourceTree = "<group>"; };
+		9DC4FD501FB1639600EC9385 /* AboutSoftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutSoftViewController.swift; sourceTree = "<group>"; };
 		9DC8F0911F6902FF0046D59D /* ECGDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ECGDataViewController.swift; sourceTree = "<group>"; };
-		9DD996541F7CDC7F00826641 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
-		9DD996611F7CDE9F00826641 /* BalloonMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalloonMarker.swift; sourceTree = "<group>"; };
-		9DD996621F7CDE9F00826641 /* RadarMarkerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadarMarkerView.swift; sourceTree = "<group>"; };
-		9DD996631F7CDE9F00826641 /* RadarMarkerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RadarMarkerView.xib; sourceTree = "<group>"; };
-		9DD996641F7CDE9F00826641 /* XYMarkerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYMarkerView.swift; sourceTree = "<group>"; };
 		9DDD29601F7CC685006172E6 /* radar_marker@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "radar_marker@3x.png"; sourceTree = "<group>"; };
 		9DDDB8081F4C2F2E00E78E68 /* PreferenceData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferenceData.swift; sourceTree = "<group>"; };
 		9DE09BDF1F8E1C9300656709 /* WatchTimeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchTimeController.swift; sourceTree = "<group>"; };
@@ -561,6 +647,11 @@
 		9DE92C3A1F5F8E7D001B928C /* ECGmsgManager+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ECGmsgManager+CoreDataClass.swift"; sourceTree = "<group>"; };
 		9DE92C3B1F5F8E7D001B928C /* ECGmsgManager+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ECGmsgManager+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		9DECA09F1F58FC8A00CDA483 /* FindpwdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindpwdViewController.swift; sourceTree = "<group>"; };
+		9DEEA2771FA18A820050A5A9 /* ecgmsgViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ecgmsgViewCell.swift; sourceTree = "<group>"; };
+		9DEEBAEC1F9F3B6D0014DF5C /* DiagnosisMsgManager+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "DiagnosisMsgManager+CoreDataClass.swift"; path = "/Users/kongqingda/Desktop/studyios/心电守护/心电守护/DiagnosisMsgManager+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		9DEEBAF61F9F3B6D0014DF5C /* DiagnosisMsgManager+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "DiagnosisMsgManager+CoreDataProperties.swift"; path = "/Users/kongqingda/Desktop/studyios/心电守护/心电守护/DiagnosisMsgManager+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		9DF29BA31FAFF64D000CB559 /* calendarlayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calendarlayout.swift; sourceTree = "<group>"; };
+		9DF29BAE1FB046D0000CB559 /* SensorShowData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorShowData.swift; sourceTree = "<group>"; };
 		9DF2A3821F8F0B6300BEB2B3 /* refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh.png; sourceTree = "<group>"; };
 		9DF2A3831F8F0B6300BEB2B3 /* refresh@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refresh@2x.png"; sourceTree = "<group>"; };
 		9DF2A3841F8F0B6300BEB2B3 /* refresh@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refresh@3x.png"; sourceTree = "<group>"; };
@@ -617,15 +708,14 @@
 		9DF4DE631F5E710800A487DA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		9DF5ED2D1F8DC4A9009A0F31 /* icon_ecg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_ecg.png; sourceTree = "<group>"; };
 		9DF69F741F566B2300A12434 /* DrawBackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawBackView.swift; sourceTree = "<group>"; };
-		9DF6A2791F5AACA50056EA2C /* 红点.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "红点.png"; path = "../../picture/红点.png"; sourceTree = "<group>"; };
-		9DF6A2821F5AACAF0056EA2C /* 红点@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "红点@2x.png"; path = "../../picture/红点@2x.png"; sourceTree = "<group>"; };
-		9DF6A2841F5AACBB0056EA2C /* 红点@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "红点@3x.png"; path = "../../picture/红点@3x.png"; sourceTree = "<group>"; };
 		9DF6A2871F5AB5F20056EA2C /* CalendarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
 		9DFA50A51F661B7C00BECBB8 /* DeviceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceCell.swift; sourceTree = "<group>"; };
 		9DFE2AA61F6B6E9300979472 /* OtherSetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherSetViewController.swift; sourceTree = "<group>"; };
 		9DFE2AA81F6BAE8400979472 /* 图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "图标.png"; sourceTree = "<group>"; };
 		9DFE2AAA1F6BAE8A00979472 /* 图标@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "图标@3x.png"; sourceTree = "<group>"; };
 		9DFE2AAC1F6BAE9800979472 /* 图标@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "图标@2x.png"; sourceTree = "<group>"; };
+		DAD9E7CAE4E314CE13665F9E /* Pods-心电守护.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-心电守护.debug.xcconfig"; path = "Pods/Target Support Files/Pods-心电守护/Pods-心电守护.debug.xcconfig"; sourceTree = "<group>"; };
+		DD10F89645379768FAE8E436 /* Pods_____.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_____.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -633,10 +723,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DD9965D1F7CDC8B00826641 /* Charts.framework in Frameworks */,
+				9D714EB81FA87B9200E86D4B /* Charts.framework in Frameworks */,
 				9D68633C1F78DD420076B335 /* AlgoSdk.framework in Frameworks */,
 				9D68632D1F78D7D90076B335 /* StreamSDK.a in Frameworks */,
-				9D7631331F55398F0049DF9B /* Alamofire.framework in Frameworks */,
+				0D313F356B2419F817AC0A97 /* Pods_____.framework in Frameworks */,
+				9D714E851FA8759D00E86D4B /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -657,6 +748,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		541C54C52975784984054387 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DAD9E7CAE4E314CE13665F9E /* Pods-心电守护.debug.xcconfig */,
+				6E46BF1851F726D9BC4CBA62 /* Pods-心电守护.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9D0088BB1F4E7A43001CC7E9 /* costomView */ = {
 			isa = PBXGroup;
 			children = (
@@ -665,6 +765,7 @@
 				9DE11EEB1F57F1E6004D1787 /* ToastView.swift */,
 				9DE11EF41F57F36F004D1787 /* AnimationUtil.swift */,
 				9D1801851F90688D004C82B9 /* calenderbackview.swift */,
+				9D514E761FB31067005EE141 /* DrawPointView.swift */,
 			);
 			name = costomView;
 			sourceTree = "<group>";
@@ -672,16 +773,17 @@
 		9D3467671F41ABA50024E726 = {
 			isa = PBXGroup;
 			children = (
-				9DD996541F7CDC7F00826641 /* Charts.xcodeproj */,
+				9D714EA51FA8798E00E86D4B /* Charts.xcodeproj */,
+				9D714E6C1FA8758800E86D4B /* Alamofire.xcodeproj */,
 				9D6863311F78DCFD0076B335 /* AlgoSdk.framework */,
 				9D6863271F78D6D10076B335 /* COMSDK */,
-				9D76310D1F5518B90049DF9B /* Alamofire.xcodeproj */,
 				9D34FA851F428031005FDCFB /* source */,
 				9D3467721F41ABA50024E726 /* 心电守护 */,
 				9D3467891F41ABA60024E726 /* 心电守护Tests */,
 				9D3467941F41ABA70024E726 /* 心电守护UITests */,
 				9D3467711F41ABA50024E726 /* Products */,
 				9DF4DE621F5E710800A487DA /* Frameworks */,
+				541C54C52975784984054387 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -698,7 +800,7 @@
 		9D3467721F41ABA50024E726 /* 心电守护 */ = {
 			isa = PBXGroup;
 			children = (
-				9DD996601F7CDE9F00826641 /* Components */,
+				9D714EC31FA87F5300E86D4B /* Components */,
 				9DAFC85C1F611E86002F24E9 /* myUtils */,
 				9DF6A2861F5AB55C0056EA2C /* costomcell */,
 				9D7631301F551BF60049DF9B /* NetUtil */,
@@ -765,6 +867,34 @@
 		9D34FA851F428031005FDCFB /* source */ = {
 			isa = PBXGroup;
 			children = (
+				9D68543E1FB18EB700DF1502 /* 导航1.png */,
+				9D6854411FB18EB800DF1502 /* 导航1@2x.png */,
+				9D6854431FB18EB800DF1502 /* 导航1@3x.jpg */,
+				9D6854371FB18EB500DF1502 /* 导航1@3x.png */,
+				9D68543F1FB18EB700DF1502 /* 导航2.png */,
+				9D6854461FB18EB900DF1502 /* 导航2@2x.png */,
+				9D6854471FB18EB900DF1502 /* 导航2@3x.png */,
+				9D68543D1FB18EB700DF1502 /* 导航3.png */,
+				9D68543A1FB18EB600DF1502 /* 导航3@2x.png */,
+				9D6854441FB18EB900DF1502 /* 导航3@3x.png */,
+				9D68543B1FB18EB600DF1502 /* 导航4.png */,
+				9D6854381FB18EB500DF1502 /* 导航4@2x.png */,
+				9D6854361FB18EB400DF1502 /* 导航4@3x.png */,
+				9D1F49501FAAB47500E7E2FD /* 绑定图标-手表.png */,
+				9D1F49531FAAB48700E7E2FD /* 绑定图标-手表@2x.png */,
+				9D1F49541FAAB48C00E7E2FD /* 绑定图标-手表@3x.png */,
+				9D1F49521FAAB48100E7E2FD /* 绑定图标-TH902.png */,
+				9D1F49551FAAB49400E7E2FD /* 绑定图标-TH902@2x.png */,
+				9D1F49511FAAB47B00E7E2FD /* 绑定图标-TH902@3x.png */,
+				9D1F49451FAAAD4B00E7E2FD /* 右翻.png */,
+				9D1F49471FAAAD5400E7E2FD /* 右翻@2x.png */,
+				9D1F49491FAAAD5D00E7E2FD /* 右翻@3x.png */,
+				9D1F49461FAAAD4F00E7E2FD /* 左翻.png */,
+				9D1F49441FAAAD4600E7E2FD /* 左翻@2x.png */,
+				9D1F49481FAAAD5800E7E2FD /* 左翻@3x.png */,
+				9D1F493F1FAAAD3900E7E2FD /* 日历背景.png */,
+				9D1F49351FAAAD3100E7E2FD /* 日历背景@2x.png */,
+				9D1F49401FAAAD3D00E7E2FD /* 日历背景@3x.png */,
 				9DE8816E1F94BA7600E27198 /* 数据包.png */,
 				9DE881781F94BA9200E27198 /* 数据包@2x.png */,
 				9DE881791F94BAB300E27198 /* 数据包@3x.png */,
@@ -819,9 +949,6 @@
 				9DB13F8E1F6A7843000F0B18 /* setting-拷贝.png */,
 				9DB13F8F1F6A7843000F0B18 /* setting-拷贝@2x.png */,
 				9DB13F901F6A7843000F0B18 /* setting-拷贝@3x.png */,
-				9DF6A2841F5AACBB0056EA2C /* 红点@3x.png */,
-				9DF6A2821F5AACAF0056EA2C /* 红点@2x.png */,
-				9DF6A2791F5AACA50056EA2C /* 红点.png */,
 				9D34FACE1F42E8AD005FDCFB /* 心电图底纹.png */,
 				9D34FACF1F42E8AD005FDCFB /* 心电图底纹@2x.png */,
 				9D34FAD01F42E8AD005FDCFB /* 心电图底纹@3x.png */,
@@ -876,24 +1003,46 @@
 			name = COMSDK;
 			sourceTree = "<group>";
 		};
-		9D76310E1F5518B90049DF9B /* Products */ = {
+		9D714E6D1FA8758800E86D4B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9D7631191F5518BA0049DF9B /* Alamofire.framework */,
-				9D76311B1F5518BA0049DF9B /* Alamofire iOS Tests.xctest */,
-				9D76311D1F5518BA0049DF9B /* Alamofire.framework */,
-				9D76311F1F5518BA0049DF9B /* Alamofire macOS Tests.xctest */,
-				9D7631211F5518BA0049DF9B /* Alamofire.framework */,
-				9D7631231F5518BA0049DF9B /* Alamofire tvOS Tests.xctest */,
-				9D7631251F5518BA0049DF9B /* Alamofire.framework */,
+				9D714E781FA8758900E86D4B /* Alamofire.framework */,
+				9D714E7A1FA8758900E86D4B /* Alamofire iOS Tests.xctest */,
+				9D714E7C1FA8758900E86D4B /* Alamofire.framework */,
+				9D714E7E1FA8758900E86D4B /* Alamofire macOS Tests.xctest */,
+				9D714E801FA8758900E86D4B /* Alamofire.framework */,
+				9D714E821FA8758900E86D4B /* Alamofire tvOS Tests.xctest */,
+				9D714E841FA8758900E86D4B /* Alamofire.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
+		};
+		9D714EA61FA8798E00E86D4B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9D714EAB1FA8798F00E86D4B /* Charts.framework */,
+				9D714EAD1FA8798F00E86D4B /* ChartsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9D714EC31FA87F5300E86D4B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				9D714EC41FA87F5300E86D4B /* BalloonMarker.swift */,
+				9D714EC51FA87F5300E86D4B /* RadarMarkerView.swift */,
+				9D714EC61FA87F5300E86D4B /* RadarMarkerView.xib */,
+				9D714EC71FA87F5300E86D4B /* XYMarkerView.swift */,
+				9D714ECC1FA8810300E86D4B /* xvalueFormatter.swift */,
+			);
+			path = Components;
+			sourceTree = SOURCE_ROOT;
 		};
 		9D7631301F551BF60049DF9B /* NetUtil */ = {
 			isa = PBXGroup;
 			children = (
 				9D7631311F551C2C0049DF9B /* netUtil.swift */,
+				9D06DCFB1F9DCF2100D4BC28 /* XMPPUtil.swift */,
 			);
 			name = NetUtil;
 			sourceTree = "<group>";
@@ -909,7 +1058,6 @@
 				9D3467771F41ABA60024E726 /* SecondViewController.swift */,
 				9DA29D0E1F42F1CE003AC361 /* ThreeViewController.swift */,
 				9DA29D101F42F1F6003AC361 /* FourViewController.swift */,
-				9DA29D161F42F276003AC361 /* UserViewController.swift */,
 				9DA29D181F42F2A0003AC361 /* BindDeviceViewController.swift */,
 				9DA29D1A1F42F2B4003AC361 /* DeviceUpdateViewController.swift */,
 				9DA29D1C1F42F2DD003AC361 /* SyncDataViewController.swift */,
@@ -918,6 +1066,10 @@
 				9DFE2AA61F6B6E9300979472 /* OtherSetViewController.swift */,
 				9D68633F1F7907C40076B335 /* ECGAlgo.swift */,
 				9DE09BDF1F8E1C9300656709 /* WatchTimeController.swift */,
+				9D54D2171FAAC9E500E38326 /* UserTableViewController.swift */,
+				9D54D2221FAACA1900E38326 /* UserCaseViewController.swift */,
+				9DC4FD451FB15B5600EC9385 /* AboutUsController.swift */,
+				9DC4FD501FB1639600EC9385 /* AboutSoftViewController.swift */,
 			);
 			name = viewcontroller;
 			sourceTree = "<group>";
@@ -930,30 +1082,15 @@
 			name = myUtils;
 			sourceTree = "<group>";
 		};
-		9DD996551F7CDC7F00826641 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				9DD9965A1F7CDC7F00826641 /* Charts.framework */,
-				9DD9965C1F7CDC7F00826641 /* ChartsTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		9DD996601F7CDE9F00826641 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				9DD996611F7CDE9F00826641 /* BalloonMarker.swift */,
-				9DD996621F7CDE9F00826641 /* RadarMarkerView.swift */,
-				9DD996631F7CDE9F00826641 /* RadarMarkerView.xib */,
-				9DD996641F7CDE9F00826641 /* XYMarkerView.swift */,
-			);
-			name = Components;
-			path = "../../../Charts-master/ChartsDemo/Classes/Components";
-			sourceTree = "<group>";
-		};
 		9DDDB8071F4C2EEB00E78E68 /* DataDAO */ = {
 			isa = PBXGroup;
 			children = (
+				9D514E6E1FB2D6F2005EE141 /* UsermsgManager+CoreDataClass.swift */,
+				9D514E6F1FB2D6F2005EE141 /* UsermsgManager+CoreDataProperties.swift */,
+				9DEEBAEC1F9F3B6D0014DF5C /* DiagnosisMsgManager+CoreDataClass.swift */,
+				9DEEBAF61F9F3B6D0014DF5C /* DiagnosisMsgManager+CoreDataProperties.swift */,
+				9D6824231F9F3F7E00DD9192 /* ECGDataManager+CoreDataClass.swift */,
+				9D6824181F9F3F7D00DD9192 /* ECGDataManager+CoreDataProperties.swift */,
 				9D123F291F67BE24002B0CE2 /* SensorDataManager+CoreDataClass.swift */,
 				9D123F2A1F67BE24002B0CE2 /* SensorDataManager+CoreDataProperties.swift */,
 				9DE92C3A1F5F8E7D001B928C /* ECGmsgManager+CoreDataClass.swift */,
@@ -962,8 +1099,10 @@
 				9DE92C371F5F8E69001B928C /* ECGDataManager+CoreDataProperties.swift */,
 				9DF4DDCE1F5E49B800A487DA /* ECGDataDao.swift */,
 				9D3B03C61F5E887800ED73A8 /* ECGmsgDao.swift */,
-				9D3B03A31F5E76BF00ED73A8 /* CoreDataDao.swift */,
+				9D514E741FB2D9DB005EE141 /* UsermsgDao.swift */,
 				9D123F271F67B6A6002B0CE2 /* SensorDataDao.swift */,
+				9D6824271F9F49C600DD9192 /* DiagnosisMsgDao.swift */,
+				9D3B03A31F5E76BF00ED73A8 /* CoreDataDao.swift */,
 				9D3B03C81F5E8B9300ED73A8 /* FiledocmDao.swift */,
 				9DF4DE5F1F5E503D00A487DA /* CoreDataModel.xcdatamodeld */,
 			);
@@ -983,13 +1122,16 @@
 		9DE47AD11F4A6ACD00341088 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
+				9D514E721FB2D724005EE141 /* Usermsgmodel.swift */,
 				9D3B03A51F5E778100ED73A8 /* ECGmsg.swift */,
 				9D3B03A71F5E7B4000ED73A8 /* ECGdata.swift */,
+				9D6824291F9F4B4100DD9192 /* diagnosismsg.swift */,
 				9D123F251F67B574002B0CE2 /* Sensordatamodel.swift */,
 				9DDDB8081F4C2F2E00E78E68 /* PreferenceData.swift */,
 				9DE47AD21F4A6B0000341088 /* DeviceData.swift */,
 				9DE47AD61F4A89CE00341088 /* WatchData.swift */,
 				9D0F9C341F5CEC880058BDEF /* CalendarDataSources.swift */,
+				9DF29BAE1FB046D0000CB559 /* SensorShowData.swift */,
 			);
 			name = DataModel;
 			sourceTree = "<group>";
@@ -1086,8 +1228,13 @@
 		9DF4DE621F5E710800A487DA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9D06DD171F9DD45C00D4BC28 /* CocoaAsyncSocket.framework */,
+				9D06DD181F9DD45C00D4BC28 /* CocoaLumberjack.framework */,
+				9D06DD191F9DD45C00D4BC28 /* KissXML.framework */,
+				9D06DD1A1F9DD45C00D4BC28 /* XMPPFramework.framework */,
 				9D6862CE1F78991D0076B335 /* Accelerate.framework */,
 				9DF4DE631F5E710800A487DA /* CoreData.framework */,
+				DD10F89645379768FAE8E436 /* Pods_____.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1098,7 +1245,8 @@
 				9DF6A2871F5AB5F20056EA2C /* CalendarCell.swift */,
 				9D3B03CA1F5EBEC500ED73A8 /* ECGTableViewCell.swift */,
 				9DFA50A51F661B7C00BECBB8 /* DeviceCell.swift */,
-				9DB13F9D1F6A7ECF000F0B18 /* calendarlayout.swift */,
+				9DEEA2771FA18A820050A5A9 /* ecgmsgViewCell.swift */,
+				9DF29BA31FAFF64D000CB559 /* calendarlayout.swift */,
 			);
 			name = costomcell;
 			sourceTree = "<group>";
@@ -1110,15 +1258,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9D34679A1F41ABA70024E726 /* Build configuration list for PBXNativeTarget "心电守护" */;
 			buildPhases = (
+				FCB1A6210CBFEE6F3D479DC2 /* [CP] Check Pods Manifest.lock */,
 				9D34676C1F41ABA50024E726 /* Sources */,
 				9D34676D1F41ABA50024E726 /* Frameworks */,
 				9D34676E1F41ABA50024E726 /* Resources */,
 				9D7631371F5539900049DF9B /* Embed Frameworks */,
+				87AD15D71A1484ACBACECCDA /* [CP] Embed Pods Frameworks */,
+				FE06AB770DC5BE13CF9DA31D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9D7631361F55398F0049DF9B /* PBXTargetDependency */,
+				9D714E881FA8759D00E86D4B /* PBXTargetDependency */,
 			);
 			name = "心电守护";
 			productName = "心电守护";
@@ -1203,12 +1354,12 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 9D76310E1F5518B90049DF9B /* Products */;
-					ProjectRef = 9D76310D1F5518B90049DF9B /* Alamofire.xcodeproj */;
+					ProductGroup = 9D714E6D1FA8758800E86D4B /* Products */;
+					ProjectRef = 9D714E6C1FA8758800E86D4B /* Alamofire.xcodeproj */;
 				},
 				{
-					ProductGroup = 9DD996551F7CDC7F00826641 /* Products */;
-					ProjectRef = 9DD996541F7CDC7F00826641 /* Charts.xcodeproj */;
+					ProductGroup = 9D714EA61FA8798E00E86D4B /* Products */;
+					ProjectRef = 9D714EA51FA8798E00E86D4B /* Charts.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -1221,67 +1372,67 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		9D7631191F5518BA0049DF9B /* Alamofire.framework */ = {
+		9D714E781FA8758900E86D4B /* Alamofire.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Alamofire.framework;
-			remoteRef = 9D7631181F5518BA0049DF9B /* PBXContainerItemProxy */;
+			remoteRef = 9D714E771FA8758900E86D4B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9D76311B1F5518BA0049DF9B /* Alamofire iOS Tests.xctest */ = {
+		9D714E7A1FA8758900E86D4B /* Alamofire iOS Tests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "Alamofire iOS Tests.xctest";
-			remoteRef = 9D76311A1F5518BA0049DF9B /* PBXContainerItemProxy */;
+			remoteRef = 9D714E791FA8758900E86D4B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9D76311D1F5518BA0049DF9B /* Alamofire.framework */ = {
+		9D714E7C1FA8758900E86D4B /* Alamofire.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Alamofire.framework;
-			remoteRef = 9D76311C1F5518BA0049DF9B /* PBXContainerItemProxy */;
+			remoteRef = 9D714E7B1FA8758900E86D4B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9D76311F1F5518BA0049DF9B /* Alamofire macOS Tests.xctest */ = {
+		9D714E7E1FA8758900E86D4B /* Alamofire macOS Tests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "Alamofire macOS Tests.xctest";
-			remoteRef = 9D76311E1F5518BA0049DF9B /* PBXContainerItemProxy */;
+			remoteRef = 9D714E7D1FA8758900E86D4B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9D7631211F5518BA0049DF9B /* Alamofire.framework */ = {
+		9D714E801FA8758900E86D4B /* Alamofire.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Alamofire.framework;
-			remoteRef = 9D7631201F5518BA0049DF9B /* PBXContainerItemProxy */;
+			remoteRef = 9D714E7F1FA8758900E86D4B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9D7631231F5518BA0049DF9B /* Alamofire tvOS Tests.xctest */ = {
+		9D714E821FA8758900E86D4B /* Alamofire tvOS Tests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "Alamofire tvOS Tests.xctest";
-			remoteRef = 9D7631221F5518BA0049DF9B /* PBXContainerItemProxy */;
+			remoteRef = 9D714E811FA8758900E86D4B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9D7631251F5518BA0049DF9B /* Alamofire.framework */ = {
+		9D714E841FA8758900E86D4B /* Alamofire.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Alamofire.framework;
-			remoteRef = 9D7631241F5518BA0049DF9B /* PBXContainerItemProxy */;
+			remoteRef = 9D714E831FA8758900E86D4B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9DD9965A1F7CDC7F00826641 /* Charts.framework */ = {
+		9D714EAB1FA8798F00E86D4B /* Charts.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Charts.framework;
-			remoteRef = 9DD996591F7CDC7F00826641 /* PBXContainerItemProxy */;
+			remoteRef = 9D714EAA1FA8798F00E86D4B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9DD9965C1F7CDC7F00826641 /* ChartsTests.xctest */ = {
+		9D714EAD1FA8798F00E86D4B /* ChartsTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = ChartsTests.xctest;
-			remoteRef = 9DD9965B1F7CDC7F00826641 /* PBXContainerItemProxy */;
+			remoteRef = 9D714EAC1FA8798F00E86D4B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -1295,26 +1446,30 @@
 				9D34FAAA1F429F17005FDCFB /* 系统升级@3x.png in Resources */,
 				9DE2AD801F8F57660054409F /* 红点@2x.png in Resources */,
 				9D34FAA61F429F17005FDCFB /* 数据同步@2x.png in Resources */,
-				9DF6A2851F5AACBB0056EA2C /* 红点@3x.png in Resources */,
 				9D1801B81F908B8E004C82B9 /* 未选中@2x.png in Resources */,
 				9DE2AD7A1F8F54A40054409F /* 日历-selector@3x.png in Resources */,
 				9D11E1CE1F8CB7B5007BCA13 /* battery_charge.png in Resources */,
+				9D1F49591FAAB49A00E7E2FD /* 绑定图标-手表@2x.png in Resources */,
 				9D34FA8E1F42863B005FDCFB /* 密码@2x.png in Resources */,
 				9DB13F911F6A7843000F0B18 /* 形状-1（合并）.png in Resources */,
 				9D1801CB1F90B536004C82B9 /* 胸贴图标@3x.png in Resources */,
 				9DE2AD8E1F8F70110054409F /* 蓝牙连接.png in Resources */,
 				9D11E1CD1F8CB7B5007BCA13 /* battery_empty.png in Resources */,
 				9D34FA901F42863B005FDCFB /* 用户帐号@2x.png in Resources */,
+				9D1F495B1FAAB49A00E7E2FD /* 绑定图标-TH902@2x.png in Resources */,
 				9D3467C41F41AC0C0024E726 /* 我的设置（灰）.png in Resources */,
 				9D1801D11F90BFEC004C82B9 /* watchicon.png in Resources */,
 				9DE2AD8F1F8F70110054409F /* 蓝牙连接@2x.png in Resources */,
 				9DF2A3B41F8F0B6400BEB2B3 /* refresh@3x.png in Resources */,
 				9DB13F941F6A7843000F0B18 /* clock-拷贝.png in Resources */,
+				9D1F494E1FAAAD6200E7E2FD /* 左翻@3x.png in Resources */,
 				9DF2A3D51F8F0B6400BEB2B3 /* 正在调针@3x.png in Resources */,
 				9D3467C21F41AC0C0024E726 /* 心电测试（灰）@2x.png in Resources */,
 				9DF2A3B91F8F0B6400BEB2B3 /* 北斗-拷贝-2（合并）@2x.png in Resources */,
 				9D34FAAB1F429F17005FDCFB /* 用户信息.png in Resources */,
 				9D3D09CE1F452C98005D4569 /* btn_blue@2x.png in Resources */,
+				9D1F494B1FAAAD6200E7E2FD /* 右翻.png in Resources */,
+				9D1F49571FAAB49A00E7E2FD /* 绑定图标-TH902@3x.png in Resources */,
 				9D34FAA21F429F17005FDCFB /* 设备绑定.png in Resources */,
 				9DF2A3D01F8F0B6400BEB2B3 /* 椭圆-1.png in Resources */,
 				9DF5ED371F8DC4A9009A0F31 /* icon_ecg.png in Resources */,
@@ -1323,16 +1478,21 @@
 				9D34FAAD1F429F17005FDCFB /* 用户信息@3x.png in Resources */,
 				9D3467C71F41AC0C0024E726 /* 计步信息（灰）.png in Resources */,
 				9D34FAD31F42E8AD005FDCFB /* 心电图底纹@3x.png in Resources */,
+				9D1F49421FAAAD4200E7E2FD /* 日历背景.png in Resources */,
+				9D1F495A1FAAB49A00E7E2FD /* 绑定图标-手表@3x.png in Resources */,
+				9D6854551FB18EBA00DF1502 /* 导航1@2x.png in Resources */,
 				9D34FA871F42841C005FDCFB /* 密码.png in Resources */,
 				9DB13F951F6A7843000F0B18 /* clock-拷贝@2x.png in Resources */,
 				9DE2AD911F8F70110054409F /* 蓝牙绑定@3x.png in Resources */,
 				9DF2A3C91F8F0B6400BEB2B3 /* 归到12点@3x.png in Resources */,
 				9DE881641F944F3E00E27198 /* 传输数据.png in Resources */,
+				9D68544E1FB18EB900DF1502 /* 导航3@2x.png in Resources */,
 				9DF2A3C41F8F0B6400BEB2B3 /* 图层-5.png in Resources */,
 				9DF2A3D91F8F0B6400BEB2B3 /* 移动时针.png in Resources */,
 				9D34FA8F1F42863B005FDCFB /* 密码@3x.png in Resources */,
 				9DF2A3C71F8F0B6400BEB2B3 /* 归到12点.png in Resources */,
 				9DF2A3C81F8F0B6400BEB2B3 /* 归到12点@2x.png in Resources */,
+				9D1F49581FAAB49A00E7E2FD /* 绑定图标-TH902.png in Resources */,
 				9DF2A3CE1F8F0B6400BEB2B3 /* 椭圆-1-拷贝@2x.png in Resources */,
 				9D11E1CF1F8CB7B5007BCA13 /* battery_default.png in Resources */,
 				9D34FAA41F429F17005FDCFB /* 设备绑定@3x.png in Resources */,
@@ -1352,29 +1512,37 @@
 				9DB13F9B1F6A7843000F0B18 /* setting-拷贝@2x.png in Resources */,
 				9DE8816B1F9457F200E27198 /* scalebtn-back.png in Resources */,
 				9D1801C41F90B44A004C82B9 /* 手表图标.png in Resources */,
+				9D1F49431FAAAD4200E7E2FD /* 日历背景@3x.png in Resources */,
 				9DE2AD8D1F8F70110054409F /* 蓝牙绑定.png in Resources */,
 				9DF2A3BC1F8F0B6400BEB2B3 /* 北斗-拷贝-分针@2x.png in Resources */,
 				9D1801DD1F90C20B004C82B9 /* 绑定图标@2x.png in Resources */,
 				9D1801CA1F90B536004C82B9 /* 胸贴图标@2x.png in Resources */,
 				9D3467C81F41AC0C0024E726 /* 计步信息（灰）@2x.png in Resources */,
+				9D68544A1FB18EB900DF1502 /* 导航4@3x.png in Resources */,
+				9D68544C1FB18EB900DF1502 /* 导航4@2x.png in Resources */,
+				9D1F494F1FAAAD6200E7E2FD /* 右翻@3x.png in Resources */,
 				9DF2A3DA1F8F0B6400BEB2B3 /* 移动时针@2x.png in Resources */,
 				9DE881631F944F3E00E27198 /* 传输数据@2x.png in Resources */,
+				9D68544F1FB18EB900DF1502 /* 导航4.png in Resources */,
 				9D34FA891F428421005FDCFB /* 用户帐号.png in Resources */,
 				9D3467801F41ABA60024E726 /* LaunchScreen.storyboard in Resources */,
 				9DF2A3B61F8F0B6400BEB2B3 /* undo@2x.png in Resources */,
 				9D1801B71F908B8E004C82B9 /* 未选中.png in Resources */,
+				9D6854521FB18EBA00DF1502 /* 导航1.png in Resources */,
 				9DF2A3CD1F8F0B6400BEB2B3 /* 椭圆-1-拷贝.png in Resources */,
 				9DB13F981F6A7843000F0B18 /* professor-拷贝@2x.png in Resources */,
 				9D1801A21F908B83004C82B9 /* 调针进度3.png in Resources */,
 				9D3467C11F41AC0C0024E726 /* 心电测试（灰）.png in Resources */,
 				9D34FA911F42863B005FDCFB /* 用户帐号@3x.png in Resources */,
 				9D1801DC1F90C20B004C82B9 /* 绑定图标@3x.png in Resources */,
+				9D1F494A1FAAAD6200E7E2FD /* 左翻@2x.png in Resources */,
 				9D34FAAC1F429F17005FDCFB /* 用户信息@2x.png in Resources */,
 				9DE2AD781F8F54A40054409F /* 日历-selector.png in Resources */,
 				9D1801BF1F908BA5004C82B9 /* 已选中@2x.png in Resources */,
 				9DF2A3BE1F8F0B6400BEB2B3 /* 北斗-时针.png in Resources */,
 				9DF2A3D21F8F0B6400BEB2B3 /* 椭圆-1@3x.png in Resources */,
 				9DF2A3CA1F8F0B6400BEB2B3 /* 时间匹配.png in Resources */,
+				9D714ECA1FA87F5300E86D4B /* RadarMarkerView.xib in Resources */,
 				9D3467C51F41AC0C0024E726 /* 我的设置（灰）@2x.png in Resources */,
 				9D34FAA91F429F17005FDCFB /* 系统升级@2x.png in Resources */,
 				9DF2A3C51F8F0B6400BEB2B3 /* 图层-5@2x.png in Resources */,
@@ -1383,15 +1551,14 @@
 				9D3D09CB1F452C98005D4569 /* btn_gray@2x.png in Resources */,
 				9DFE2AA91F6BAE8400979472 /* 图标.png in Resources */,
 				9D1801CF1F90BFEC004C82B9 /* watchicon@2x.png in Resources */,
-				9DF6A2831F5AACAF0056EA2C /* 红点@2x.png in Resources */,
 				9DE8817A1F94BAE400E27198 /* 数据包.png in Resources */,
 				9D34FAD21F42E8AD005FDCFB /* 心电图底纹@2x.png in Resources */,
 				9D1801A81F908B83004C82B9 /* 调针进度5@2x.png in Resources */,
 				9DB13F921F6A7843000F0B18 /* 形状-1（合并）@2x.png in Resources */,
+				9D1F494C1FAAAD6200E7E2FD /* 左翻.png in Resources */,
 				9DFE2AAB1F6BAE8A00979472 /* 图标@3x.png in Resources */,
 				9D1801D51F90C072004C82B9 /* iphoneicon@3x.png in Resources */,
 				9D1801AB1F908B83004C82B9 /* 调针进度2@2x.png in Resources */,
-				9DD996671F7CDE9F00826641 /* RadarMarkerView.xib in Resources */,
 				9DDD296A1F7CC685006172E6 /* radar_marker@3x.png in Resources */,
 				9D1801D61F90C072004C82B9 /* iphoneicon@2x.png in Resources */,
 				9DE8817B1F94BAE400E27198 /* 数据包@2x.png in Resources */,
@@ -1411,6 +1578,7 @@
 				9D1801B31F908B83004C82B9 /* 调针进度6@2x.png in Resources */,
 				9DF4DDD51F5E4E1500A487DA /* 心电图底纹-拷贝-4.png in Resources */,
 				9D1801A71F908B83004C82B9 /* 调针进度4@2x.png in Resources */,
+				9D6854571FB18EBA00DF1502 /* 导航1@3x.jpg in Resources */,
 				9D3D09CA1F452C98005D4569 /* btn_gray.png in Resources */,
 				9D1801AC1F908B83004C82B9 /* 调针进度5@3x.png in Resources */,
 				9D34FAA71F429F17005FDCFB /* 数据同步@3x.png in Resources */,
@@ -1418,6 +1586,8 @@
 				9DE881691F9457F200E27198 /* scalebtn-back@3x.png in Resources */,
 				9DF2A3B31F8F0B6400BEB2B3 /* refresh@2x.png in Resources */,
 				9DB13F9A1F6A7843000F0B18 /* setting-拷贝.png in Resources */,
+				9D1F494D1FAAAD6200E7E2FD /* 右翻@2x.png in Resources */,
+				9D68545A1FB18EBA00DF1502 /* 导航2@2x.png in Resources */,
 				9D1801AA1F908B83004C82B9 /* 调针进度4@3x.png in Resources */,
 				9D1801A41F908B83004C82B9 /* 调针进度4.png in Resources */,
 				9DE2AD631F8F3FAC0054409F /* 调时进度1.png in Resources */,
@@ -1429,12 +1599,14 @@
 				9DE2AD861F8F57CE0054409F /* 日历-选中@3x.png in Resources */,
 				9DF2A3D31F8F0B6400BEB2B3 /* 正在调针.png in Resources */,
 				9D3D09D51F452F6E005D4569 /* bangding@3x.png in Resources */,
+				9D6854531FB18EBA00DF1502 /* 导航2.png in Resources */,
 				9DF2A3CB1F8F0B6400BEB2B3 /* 时间匹配@2x.png in Resources */,
 				9DB13F971F6A7843000F0B18 /* professor-拷贝.png in Resources */,
 				9D1801A61F908B83004C82B9 /* 调针进度2@3x.png in Resources */,
 				9D34677D1F41ABA60024E726 /* Assets.xcassets in Resources */,
 				9D1801B01F908B83004C82B9 /* 调针进度6.png in Resources */,
 				9DF2A3D81F8F0B6400BEB2B3 /* 移动分针@3x.png in Resources */,
+				9D1F49411FAAAD4200E7E2FD /* 日历背景@2x.png in Resources */,
 				9D34FAD11F42E8AD005FDCFB /* 心电图底纹.png in Resources */,
 				9DB13F991F6A7843000F0B18 /* professor-拷贝@3x.png in Resources */,
 				9DF2A3BF1F8F0B6400BEB2B3 /* 北斗-时针@2x.png in Resources */,
@@ -1450,6 +1622,7 @@
 				9DF2A3D11F8F0B6400BEB2B3 /* 椭圆-1@2x.png in Resources */,
 				9DF2A3BA1F8F0B6400BEB2B3 /* 北斗-拷贝-2（合并）@3x.png in Resources */,
 				9D3467BE1F41AC0C0024E726 /* 心电数据（灰）.png in Resources */,
+				9D68544B1FB18EB900DF1502 /* 导航1@3x.png in Resources */,
 				9DE8817C1F94BAE400E27198 /* 数据包@3x.png in Resources */,
 				9DF2A3DF1F8F0B6400BEB2B3 /* 请确认归到12点.png in Resources */,
 				9DF2A3CC1F8F0B6400BEB2B3 /* 时间匹配@3x.png in Resources */,
@@ -1460,19 +1633,23 @@
 				9DF2A3BB1F8F0B6400BEB2B3 /* 北斗-拷贝-分针.png in Resources */,
 				9DB13F961F6A7843000F0B18 /* clock-拷贝@3x.png in Resources */,
 				9D34FAA81F429F17005FDCFB /* 系统升级.png in Resources */,
+				9D1F49561FAAB49A00E7E2FD /* 绑定图标-手表.png in Resources */,
 				9DE2AD791F8F54A40054409F /* 日历-selector@2x.png in Resources */,
 				9D3D09D41F452F6E005D4569 /* bangding@2x.png in Resources */,
 				9D3D09C21F452C84005D4569 /* circle_blue@2x.png in Resources */,
 				9D3467C31F41AC0C0024E726 /* 心电测试（灰）@3x.png in Resources */,
 				9D1801C91F90B536004C82B9 /* 胸贴图标.png in Resources */,
+				9D6854511FB18EBA00DF1502 /* 导航3.png in Resources */,
 				9D3D09C11F452C84005D4569 /* circle_blue.png in Resources */,
 				9DE2AD901F8F70110054409F /* 蓝牙连接@3x.png in Resources */,
 				9D1801A51F908B83004C82B9 /* 调针进度1@2x.png in Resources */,
 				9DF2A3DC1F8F0B6400BEB2B3 /* 移动秒针.png in Resources */,
+				9D6854581FB18EBA00DF1502 /* 导航3@3x.png in Resources */,
 				9D1801A31F908B83004C82B9 /* 调针进度6@3x.png in Resources */,
 				9DE8816A1F9457F200E27198 /* scalebtn-back@2x.png in Resources */,
 				9D3D09CF1F452C98005D4569 /* btn_blue@3x.png in Resources */,
 				9DF2A3D41F8F0B6400BEB2B3 /* 正在调针@2x.png in Resources */,
+				9D68545B1FB18EBA00DF1502 /* 导航2@3x.png in Resources */,
 				9DF2A3CF1F8F0B6400BEB2B3 /* 椭圆-1-拷贝@3x.png in Resources */,
 				9D1801D01F90BFEC004C82B9 /* watchicon@3x.png in Resources */,
 				9DF2A3C11F8F0B6400BEB2B3 /* 北斗-秒针.png in Resources */,
@@ -1482,7 +1659,6 @@
 				9D3D09C31F452C84005D4569 /* circle_blue@3x.png in Resources */,
 				9DF2A3E11F8F0B6400BEB2B3 /* 请确认归到12点@3x.png in Resources */,
 				9DE2AD921F8F70110054409F /* 蓝牙绑定@2x.png in Resources */,
-				9DF6A27A1F5AACA50056EA2C /* 红点.png in Resources */,
 				9D3D09CC1F452C98005D4569 /* btn_gray@3x.png in Resources */,
 				9D11E1CC1F8CB7B5007BCA13 /* battery_two.png in Resources */,
 			);
@@ -1504,6 +1680,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		87AD15D71A1484ACBACECCDA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-心电守护/Pods-心电守护-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
+				"${BUILT_PRODUCTS_DIR}/KissXML/KissXML.framework",
+				"${BUILT_PRODUCTS_DIR}/XMPPFramework/XMPPFramework.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KissXML.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XMPPFramework.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-心电守护/Pods-心电守护-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FCB1A6210CBFEE6F3D479DC2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-心电守护-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE06AB770DC5BE13CF9DA31D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-心电守护/Pods-心电守护-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9D34676C1F41ABA50024E726 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -1515,17 +1751,21 @@
 				9D0F9C351F5CEC880058BDEF /* CalendarDataSources.swift in Sources */,
 				9DFA50A61F661B7C00BECBB8 /* DeviceCell.swift in Sources */,
 				9D3B03C91F5E8B9300ED73A8 /* FiledocmDao.swift in Sources */,
+				9DC4FD511FB1639600EC9385 /* AboutSoftViewController.swift in Sources */,
 				9D123F261F67B574002B0CE2 /* Sensordatamodel.swift in Sources */,
 				9DFE2AA71F6B6E9300979472 /* OtherSetViewController.swift in Sources */,
 				9D3B03A41F5E76BF00ED73A8 /* CoreDataDao.swift in Sources */,
+				9DF29BA41FAFF64D000CB559 /* calendarlayout.swift in Sources */,
+				9D514E771FB31067005EE141 /* DrawPointView.swift in Sources */,
 				9DF4DDCF1F5E49B800A487DA /* ECGDataDao.swift in Sources */,
-				9DA29D171F42F276003AC361 /* UserViewController.swift in Sources */,
+				9D54D2181FAAC9E500E38326 /* UserTableViewController.swift in Sources */,
 				9D0088BD1F4E7A78001CC7E9 /* DrawLineView.swift in Sources */,
 				9DE11EF51F57F36F004D1787 /* AnimationUtil.swift in Sources */,
 				9DA29D1B1F42F2B4003AC361 /* DeviceUpdateViewController.swift in Sources */,
 				9DA29D131F42F21A003AC361 /* LoadViewController.swift in Sources */,
 				9DF6A2881F5AB5F20056EA2C /* CalendarCell.swift in Sources */,
 				9D123F281F67B6A6002B0CE2 /* SensorDataDao.swift in Sources */,
+				9D68242A1F9F4B4100DD9192 /* diagnosismsg.swift in Sources */,
 				9D123F191F6772C8002B0CE2 /* BleDataAnalysis.swift in Sources */,
 				9D3467781F41ABA60024E726 /* SecondViewController.swift in Sources */,
 				9DDDB8091F4C2F2E00E78E68 /* PreferenceData.swift in Sources */,
@@ -1533,26 +1773,34 @@
 				9D3467741F41ABA50024E726 /* AppDelegate.swift in Sources */,
 				9DA29D111F42F1F6003AC361 /* FourViewController.swift in Sources */,
 				9D3B03A81F5E7B4000ED73A8 /* ECGdata.swift in Sources */,
+				9D714EC91FA87F5300E86D4B /* RadarMarkerView.swift in Sources */,
 				9DC8F0921F6902FF0046D59D /* ECGDataViewController.swift in Sources */,
-				9DB13F9E1F6A7ECF000F0B18 /* calendarlayout.swift in Sources */,
+				9D714EC81FA87F5300E86D4B /* BalloonMarker.swift in Sources */,
 				9DE47AD51F4A856800341088 /* MainController.swift in Sources */,
+				9D514E731FB2D724005EE141 /* Usermsgmodel.swift in Sources */,
 				9D3467761F41ABA50024E726 /* FirstViewController.swift in Sources */,
+				9D714ECD1FA8810300E86D4B /* xvalueFormatter.swift in Sources */,
 				9DE47AD71F4A89CE00341088 /* WatchData.swift in Sources */,
 				9DA29D1D1F42F2DD003AC361 /* SyncDataViewController.swift in Sources */,
+				9DEEA2781FA18A820050A5A9 /* ecgmsgViewCell.swift in Sources */,
+				9DF29BAF1FB046D0000CB559 /* SensorShowData.swift in Sources */,
+				9D6824281F9F49C600DD9192 /* DiagnosisMsgDao.swift in Sources */,
+				9D714ECB1FA87F5300E86D4B /* XYMarkerView.swift in Sources */,
 				9D3B03CB1F5EBEC500ED73A8 /* ECGTableViewCell.swift in Sources */,
 				9D3B03A61F5E778100ED73A8 /* ECGmsg.swift in Sources */,
 				9DE47AD91F4AB5FD00341088 /* BleOrders.swift in Sources */,
-				9DD996681F7CDE9F00826641 /* XYMarkerView.swift in Sources */,
 				9D6863401F7907C40076B335 /* ECGAlgo.swift in Sources */,
 				9DE47AD31F4A6B0000341088 /* DeviceData.swift in Sources */,
 				9D1801861F90688D004C82B9 /* calenderbackview.swift in Sources */,
 				9DF4DE611F5E503D00A487DA /* CoreDataModel.xcdatamodeld in Sources */,
+				9D54D2231FAACA1900E38326 /* UserCaseViewController.swift in Sources */,
 				9D3B03C71F5E887800ED73A8 /* ECGmsgDao.swift in Sources */,
-				9DD996651F7CDE9F00826641 /* BalloonMarker.swift in Sources */,
+				9D514E751FB2D9DB005EE141 /* UsermsgDao.swift in Sources */,
 				9DAFC8651F611ED7002F24E9 /* CommonUtils.swift in Sources */,
+				9DC4FD461FB15B5600EC9385 /* AboutUsController.swift in Sources */,
 				9D7631321F551C2C0049DF9B /* netUtil.swift in Sources */,
-				9DD996661F7CDE9F00826641 /* RadarMarkerView.swift in Sources */,
 				9DECA0A01F58FC8A00CDA483 /* FindpwdViewController.swift in Sources */,
+				9D06DCFC1F9DCF2100D4BC28 /* XMPPUtil.swift in Sources */,
 				9DA29D191F42F2A0003AC361 /* BindDeviceViewController.swift in Sources */,
 				9DA29D0F1F42F1CE003AC361 /* ThreeViewController.swift in Sources */,
 				9DF69F751F566B2300A12434 /* DrawBackView.swift in Sources */,
@@ -1587,10 +1835,10 @@
 			target = 9D34676F1F41ABA50024E726 /* 心电守护 */;
 			targetProxy = 9D3467921F41ABA70024E726 /* PBXContainerItemProxy */;
 		};
-		9D7631361F55398F0049DF9B /* PBXTargetDependency */ = {
+		9D714E881FA8759D00E86D4B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Alamofire iOS";
-			targetProxy = 9D7631351F55398F0049DF9B /* PBXContainerItemProxy */;
+			targetProxy = 9D714E871FA8759D00E86D4B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1655,7 +1903,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos11.0;
@@ -1699,7 +1947,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos11.0;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -1709,6 +1957,7 @@
 		};
 		9D34679B1F41ABA70024E726 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAD9E7CAE4E314CE13665F9E /* Pods-心电守护.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1736,6 +1985,7 @@
 		};
 		9D34679C1F41ABA70024E726 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E46BF1851F726D9BC4CBA62 /* Pods-心电守护.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;

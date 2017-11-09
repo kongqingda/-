@@ -1,16 +1,14 @@
 //
-//  DrawLineView.swift
+//  DrawPointView.swift
 //  心电守护
 //
-//  Created by 孔庆达 on 2017/8/24.
+//  Created by 孔庆达 on 2017/11/8.
 //  Copyright © 2017年 qingda kong. All rights reserved.
 //
+
 import UIKit
-enum hand : Int{
-    case righthand = 0
-    case lefthand = 1
-}
-class DrawLineView: UIView {
+
+class DrawPointView: UIView {
     var widthmax : Int = FirstViewController.SAMPLERATE*4
     var drawData : Array<Int> = []
     var filterdrawData : Array<Double> = []
@@ -22,9 +20,9 @@ class DrawLineView: UIView {
     var viewheight : CGFloat = 0
     var zhengyi : Double = 10 //增益值
     var scale : Double = 10
-    static var myhand : hand = hand.lefthand
     var beforenum : Double = 0
-
+    var per_w : Double = 0
+    
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
     override func draw(_ rect: CGRect) {
@@ -34,12 +32,12 @@ class DrawLineView: UIView {
         
         viewheight = rect.size.height
         widthmax = FirstViewController.SAMPLERATE*4
-         let context = UIGraphicsGetCurrentContext()
-         context!.scaleBy(x: 1, y: -1)
-         context!.translateBy(x: 0, y: -viewheight)
-
+        let context = UIGraphicsGetCurrentContext()
+        context!.scaleBy(x: 1, y: -1)
+        context!.translateBy(x: 0, y: -viewheight)
+        
         //绘制曲线
-        let per_w = Double(viewwidth)/Double(widthmax)
+        per_w = Double(viewwidth)/Double(widthmax)
         context!.setLineWidth(1.5)
         context!.move(to: CGPoint(x:0,y:viewheight/2))
         if drawData.count > 0 {
@@ -55,6 +53,27 @@ class DrawLineView: UIView {
         
         
     }
+    override func draw(_ layer: CALayer, in ctx: CGContext) {
+        
+        ctx.scaleBy(x: 1, y: -1)
+        ctx.translateBy(x: 0, y: -viewheight)
+        
+        //绘制曲线
+        per_w = Double(viewwidth)/Double(widthmax)
+        ctx.setLineWidth(1.5)
+        ctx.move(to: CGPoint(x:0,y:viewheight/2))
+        if drawData.count > 0 {
+            var i : Double = 1
+            for data in filterdrawData{
+                ctx.addLine(to: CGPoint(x:per_w * i,y:(data*Double(viewheight))/110+Double(viewheight)/2))
+                i += 1
+            }
+        }
+        //设置线条颜色
+        UIColor.init(cgColor: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)).setStroke()
+        ctx.setStrokeColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
+        ctx.drawPath(using: .stroke)
+    }
     
     func turnData(data : Int) -> Double {
         var result : Double = (Double(data)*m)/1000
@@ -64,7 +83,7 @@ class DrawLineView: UIView {
         }else {
             return -result
         }
-       // return result
+        // return result
         
     }
     
@@ -77,15 +96,17 @@ class DrawLineView: UIView {
             }
             filterdrawData = filterdata(filternum: filternum, data: drawData)
             let x : CGFloat = (self.frame.width)*CGFloat(filterdrawData.count-2)/CGFloat(widthmax)
-            let aftertime = TimeInterval(1/Double(FirstViewController.SAMPLERATE))
-            self.setNeedsDisplay(CGRect.init(x: x, y:0 , width:10, height: self.frame.height))
-           // self.perform(#selector(drawline), with: nil, afterDelay:aftertime )
+            //let aftertime = TimeInterval(1/Double(FirstViewController.SAMPLERATE))
+            let i = Double(drawData.count-1)
+            self.setNeedsDisplay()
+            //self.setNeedsDisplay(CGRect.init(x:per_w * i,y:0.0, width:per_w*2, height: Double(self.frame.height)))
+            // self.perform(#selector(drawline), with: nil, afterDelay:aftertime )
             
         }else{
             filterdrawData = filterdata(filternum: filternum, data: drawData)
             self.setNeedsDisplay()
         }
-       
+        
     }
     func drawline(){
         self.setNeedsDisplay()
@@ -111,9 +132,10 @@ class DrawLineView: UIView {
             }
             result.append(Double(sumdata/mean))
         }
-             return result
+        return result
     }
     
- 
-
+    
+    
 }
+

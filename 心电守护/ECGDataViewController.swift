@@ -8,8 +8,9 @@
 
 import UIKit
 
-class ECGDataViewController: UIViewController {
-
+class ECGDataViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
+    
+    @IBOutlet weak var Ecgmsgviewwidth: NSLayoutConstraint!
     
     @IBOutlet weak var enddatelabel: UILabel!
     @IBOutlet weak var startdatelabel: UILabel!
@@ -19,11 +20,18 @@ class ECGDataViewController: UIViewController {
     @IBOutlet weak var drawviewheight: NSLayoutConstraint!
     @IBOutlet weak var scalelabel: UILabel!
     
+    @IBOutlet weak var ecgmsgview: UICollectionView!
+    @IBOutlet weak var diagmsgtext: UILabel!
+    @IBOutlet weak var sender: UILabel!
+    @IBOutlet weak var sendtime: UILabel!
     @IBOutlet weak var drawbackview: DrawBackView!
+    
     var filepath : String = ""
     var datestr : String = ""
     var startdate : String = ""
     var enddate : String = ""
+    var dataId : Int32 = 0
+    var samplerate : Int16 = 0
     var filedao : FiledocmDao = FiledocmDao()
     var data : Data = Data()
     var currentvalue : Float = 0.0
@@ -36,12 +44,19 @@ class ECGDataViewController: UIViewController {
     var viewwidth : CGFloat = 0.0
     let toastview : ToastView = ToastView.instance
     var timer : Timer = Timer()
+    var diagdao : DiagnosisMsgDao = DiagnosisMsgDao()
+    var tableArray : NSMutableArray = NSMutableArray()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         drawlineview.backgroundColor = #colorLiteral(red: 1, green: 0.150029252, blue: 0, alpha: 0)//设置背景透明
         let screenwidth = UIScreen.main.bounds.size.width
         drawviewheight.constant = CGFloat(11)*screenwidth/CGFloat(20)
+        FirstViewController.SAMPLERATE = Int(samplerate)
         
+        Ecgmsgviewwidth.constant = screenwidth
+        ecgmsgview.delegate = self
+        ecgmsgview.dataSource = self
         drawbackview.setNeedsDisplay()
         drawlineview.setNeedsDisplay()
         viewwidth = drawlineview.viewwidth
@@ -50,6 +65,7 @@ class ECGDataViewController: UIViewController {
         startdatelabel.text = startdate
         enddatelabel.text = enddate
         filedao = FiledocmDao.init()
+        diagdao = DiagnosisMsgDao.sharedInstance
         //创建Pan手势识别器
         let recognizer = UIPanGestureRecognizer(target: self, action: #selector(foundPan(_:)))
         //设置Pan手势识别器属性
@@ -58,14 +74,17 @@ class ECGDataViewController: UIViewController {
         
         //Pan手势识别器关联到imageView
         self.drawlineview.addGestureRecognizer(recognizer)
+
         //设置开启用户事件
         self.drawlineview.isUserInteractionEnabled = true
         timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(initview), userInfo: nil, repeats: false)
         
-           }
+   }
     
-    
+
     func initview(){
+       
+        
         if filedao.readfile(filename: filepath) != nil{
             data = filedao.readfile(filename: filepath)!
         }
@@ -81,7 +100,49 @@ class ECGDataViewController: UIViewController {
         pervalue = Float(drawlineview.widthmax)/Float(viewwidth)
         draw()
         toastview.clear()
-
+        if dataId != 0{
+            let diagdata = diagdao.findBydataId(dataId, LoadViewController.USERNAME)
+            if diagdata != nil{
+                if diagdata?.isread == false{
+                    diagdata?.isread = true
+                    diagdao.modify(diagdata!)
+                }
+                do{
+                    let dic  = try JSONSerialization.jsonObject(with: (diagdata?.content?.data(using: String.Encoding.utf8))!, options: JSONSerialization.ReadingOptions.mutableLeaves) as! NSDictionary
+                    print(dic)
+                    sender.text = "发 送 人: "+(diagdata?.sender)!
+                    let senddate : Date  = Date.init(timeIntervalSince1970: TimeInterval.init(((diagdata?.sentTime)!/1000))) //diagdata?.sentTime
+                    let dateformatter : DateFormatter = DateFormatter()
+                    dateformatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+                    let senddatestr = dateformatter.string(from: senddate)
+                    let RwaveInfo  = dic["RwaveInfo"] as! NSDictionary
+                    let HRV = RwaveInfo["HRV"]
+                    let avgHr = RwaveInfo["avgHr"]
+                    let maxHr = RwaveInfo["maxHr"]
+                    let minHr = RwaveInfo["minHr"]
+                    let rrIntervelNum = RwaveInfo["rrIntervelNum"]
+                    let maxRrInterval = RwaveInfo["maxRrInterval"]
+                    sendtime.text = "发送时间: "+senddatestr
+                    tableArray.add(("心跳总数",HRV))
+                    tableArray.add(("平均心率",avgHr))
+                    tableArray.add(("最大心率",maxHr))
+                    tableArray.add(("最小心率",minHr))
+                    tableArray.add(("RR间期数",rrIntervelNum))
+                    ecgmsgview.reloadData()
+                }catch _{
+                    
+                }
+            }else{
+                sender.isHidden = true
+                sendtime.isHidden = true
+                ecgmsgview.isHidden = true
+            }
+           
+        }else{
+            sender.isHidden = true
+            sendtime.isHidden = true
+            ecgmsgview.isHidden = true
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -132,6 +193,7 @@ class ECGDataViewController: UIViewController {
     
     var beforeloc : CGPoint = CGPoint.init(x: 0, y: 0)
     
+    //手势操作
     func foundPan(_ sender: UIPanGestureRecognizer) {
         
         print(sender.state)
@@ -150,6 +212,7 @@ class ECGDataViewController: UIViewController {
         }
     }
     
+    //分解数据
     func analysisdata(){
         alldata = [UInt8](data)
         let k : Int = Int(ceil(Double(alldata.count/16)))
@@ -158,9 +221,10 @@ class ECGDataViewController: UIViewController {
                 if alldata.count>=16{
                     
                     for m  in 0 ..< 8{
-                        let perdata =  (Int16(alldata[m*2+1]) & 0xff) << 8  | ((Int16(alldata[m*2]) & 0xff))//将两个8位数据组合
+                        let perdata =  (Int16(alldata[m*2]) & 0xff) << 8  | ((Int16(alldata[m*2+1]) & 0xff))//将两个8位数据组合
                         
                         if m < 5 {
+                            
                             drawlist.append(Int(perdata))
                             
                         }
@@ -185,7 +249,7 @@ class ECGDataViewController: UIViewController {
         }
        
         self.drawlineview.drawData = currentdrawlist
-        self.drawlineview.setNeedsDisplay()
+        self.drawlineview.adddata(perdata: nil)
     }
   
     // MARK: - Navigation
@@ -203,28 +267,28 @@ class ECGDataViewController: UIViewController {
             if sender.scale>1.5{
                 if  drawlineview.scale == 10{
                     drawlineview.scale = drawlineview.scale*2
-                    drawlineview.setNeedsDisplay()
+                    drawlineview.adddata(perdata: nil)
                     scalelabel.text = "增益：20mm/mv"
                 }
             }
             if sender.scale>2.0{
                 if  drawlineview.scale == 20{
                     drawlineview.scale = drawlineview.scale*2
-                    drawlineview.setNeedsDisplay()
+                    drawlineview.adddata(perdata: nil)
                     scalelabel.text = "增益：40mm/mv"
                 }
             }
             if sender.scale < 0.8{
                 if  drawlineview.scale == 40{
                     drawlineview.scale = drawlineview.scale/2
-                    drawlineview.setNeedsDisplay()
+                    drawlineview.adddata(perdata: nil)
                      scalelabel.text = "增益：20mm/mv"
                 }
             }
             if sender.scale < 0.6{
                 if  drawlineview.scale == 20{
                     drawlineview.scale = drawlineview.scale/2
-                    drawlineview.setNeedsDisplay()
+                    drawlineview.adddata(perdata: nil)
                     scalelabel.text = "增益：10mm/mv"
                 }
             }
@@ -232,6 +296,25 @@ class ECGDataViewController: UIViewController {
             sender.scale = 1
         }
     }
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return tableArray.count
+    }
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+         let cell : ecgmsgViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ecgmsgcell", for: indexPath) as! ecgmsgViewCell
+        //计算events集合下标索引
+        if tableArray.count > 0{
+            let idx = indexPath.section * tableArray.count + indexPath.row;
+            let data = tableArray[idx] as! (String,Any)
+            cell.titlelabel.text = data.0
+            cell.contentlabel.text = "\(data.1 as! Int)"
+        }
+        return cell
+    }
+    
     
 
 }

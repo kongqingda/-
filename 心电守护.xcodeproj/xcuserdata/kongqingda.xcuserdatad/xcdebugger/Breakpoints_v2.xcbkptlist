@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/BleTools.swift"
-            timestampString = "529842399.294371"
+            timestampString = "531829970.165386"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "378"
-            endingLineNumber = "378"
+            startingLineNumber = "466"
+            endingLineNumber = "466"
             landmarkName = "peripheral(_:didUpdateValueFor:error:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -25,13 +25,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/DrawLineView.swift"
-            timestampString = "529905524.939969"
+            filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/netUtil.swift"
+            timestampString = "531050128.356466"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "draw(_:)"
+            startingLineNumber = "347"
+            endingLineNumber = "347"
+            landmarkName = "createheader()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -41,28 +41,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/netUtil.swift"
-            timestampString = "529905524.940066"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "293"
-            endingLineNumber = "293"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/UserViewController.swift"
-            timestampString = "529842399.294626"
+            timestampString = "531740435.168311"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
             landmarkName = "queryPersonalInfo(notification:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -74,13 +58,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/SecondViewController.swift"
-            timestampString = "529898283.455166"
+            timestampString = "531829970.165848"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "165"
-            endingLineNumber = "165"
-            landmarkName = "SecondViewController"
-            landmarkType = "3">
+            startingLineNumber = "191"
+            endingLineNumber = "191"
+            landmarkName = "rightbtn(_:)"
+            landmarkType = "7">
             <Locations>
                <Location
                   shouldBeEnabled = "No"
@@ -152,11 +136,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/SecondViewController.swift"
-            timestampString = "529898283.455241"
+            timestampString = "531829970.166267"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "226"
-            endingLineNumber = "226"
+            startingLineNumber = "272"
+            endingLineNumber = "272"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -168,11 +152,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/ECGDataDao.swift"
-            timestampString = "528612926.949233"
+            timestampString = "531829970.166365"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
             landmarkName = "create(_:)"
             landmarkType = "7">
             <Locations>
@@ -216,13 +200,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/ECGdata.swift"
-            timestampString = "526354957.876875"
+            timestampString = "531027853.810832"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "24"
             endingLineNumber = "24"
-            landmarkName = "init(date:enddate:fileurl:isupdate:startdate:phone:devicename:deviceid:)"
-            landmarkType = "7">
+            landmarkName = "ECGdata"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -232,11 +216,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/ECGDataDao.swift"
-            timestampString = "528612926.949312"
+            timestampString = "531829970.16677"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
             landmarkName = "findByDate(_:_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -248,11 +232,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/ECGDataDao.swift"
-            timestampString = "528612926.949363"
+            timestampString = "531829970.166851"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
             landmarkName = "create(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -264,11 +248,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/ECGDataDao.swift"
-            timestampString = "528612926.949412"
+            timestampString = "531829970.166918"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "create(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -280,11 +264,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/ECGDataDao.swift"
-            timestampString = "528612926.949459"
+            timestampString = "531829970.16698"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "create(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -296,11 +280,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/ECGmsgDao.swift"
-            timestampString = "528537583.499877"
+            timestampString = "531829970.167043"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "create(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -312,12 +296,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/ECGdata.swift"
-            timestampString = "526355955.162314"
+            timestampString = "531027853.811097"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "init(coder:)"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "encode(with:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -328,23 +312,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/ECGmsgDao.swift"
-            timestampString = "528537583.500025"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
-            landmarkName = "findByDate(_:_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/ECGmsgDao.swift"
-            timestampString = "528537583.500104"
+            timestampString = "531829970.167407"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "113"
@@ -360,11 +328,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/ECGmsgDao.swift"
-            timestampString = "528537583.500175"
+            timestampString = "531829970.167491"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "116"
-            endingLineNumber = "116"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
             landmarkName = "findByDate(_:_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -376,11 +344,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/ECGmsgDao.swift"
-            timestampString = "528537583.500254"
+            timestampString = "531829970.167561"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "118"
-            endingLineNumber = "118"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
             landmarkName = "findByDate(_:_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -391,13 +359,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/SecondViewController.swift"
-            timestampString = "529898283.45549"
+            filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/ECGmsgDao.swift"
+            timestampString = "531829970.16763"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "251"
-            endingLineNumber = "251"
-            landmarkName = "collectionView(_:didSelectItemAt:)"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
+            landmarkName = "findByDate(_:_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -408,11 +376,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/BindDeviceViewController.swift"
-            timestampString = "529842399.295255"
+            timestampString = "531829970.167702"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "376"
-            endingLineNumber = "376"
+            startingLineNumber = "397"
+            endingLineNumber = "397"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -424,11 +392,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/BleTools.swift"
-            timestampString = "529842399.295398"
+            timestampString = "531829970.168385"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "392"
-            endingLineNumber = "392"
+            startingLineNumber = "480"
+            endingLineNumber = "480"
             landmarkName = "peripheral(_:didWriteValueFor:error:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -440,11 +408,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/SyncDataViewController.swift"
-            timestampString = "529905524.944964"
+            timestampString = "531805600.004231"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
             landmarkName = "SyncBtnAction(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -456,44 +424,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/SyncDataViewController.swift"
-            timestampString = "529905524.945055"
+            timestampString = "531805600.004286"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
             landmarkName = "SyncBtnAction(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/SyncDataViewController.swift"
-            timestampString = "529905524.945129"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
-            landmarkName = "SyncBtnAction(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/SecondViewController.swift"
-            timestampString = "529898283.455735"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "240"
-            endingLineNumber = "240"
-            landmarkName = "collectionView(_:didSelectItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -504,7 +440,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/DeviceCell.swift"
-            timestampString = "527055995.533227"
+            timestampString = "531196839.768468"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "35"
@@ -518,11 +454,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/BindDeviceViewController.swift"
-            timestampString = "529842399.295611"
+            timestampString = "531829970.168559"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
             landmarkName = "ReloadBtnAction(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -534,11 +470,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/BindDeviceViewController.swift"
-            timestampString = "529842399.295682"
+            timestampString = "531829970.16893"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
             landmarkName = "ReloadBtnAction(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -549,24 +485,8 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/ECGDataViewController.swift"
-            timestampString = "529905524.945288"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/FiledocmDao.swift"
-            timestampString = "526988250.575236"
+            timestampString = "530615953.741538"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "77"
@@ -581,60 +501,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/ECGDataViewController.swift"
-            timestampString = "529905524.945375"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/ECGDataViewController.swift"
-            timestampString = "529905524.945433"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
-            landmarkName = "slideraction(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/SecondViewController.swift"
-            timestampString = "529898283.455901"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "135"
-            endingLineNumber = "135"
-            landmarkName = "calendarpan(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/MainController.swift"
-            timestampString = "529905524.945517"
+            timestampString = "531829970.169311"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
             landmarkName = "getblestate()"
             landmarkType = "7">
          </BreakpointContent>
@@ -666,7 +538,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/DrawLineView.swift"
-            timestampString = "529905524.945577"
+            timestampString = "531887316.288976"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "62"
@@ -682,13 +554,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/BindDeviceViewController.swift"
-            timestampString = "529842399.295888"
+            timestampString = "531829970.169814"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "418"
-            endingLineNumber = "418"
-            landmarkName = "calcDistByRSSI(rssi:)"
-            landmarkType = "7">
+            startingLineNumber = "439"
+            endingLineNumber = "439"
+            landmarkName = "BindDeviceViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -698,13 +570,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/BindDeviceViewController.swift"
-            timestampString = "529842399.295955"
+            timestampString = "531829970.170208"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "419"
-            endingLineNumber = "419"
-            landmarkName = "calcDistByRSSI(rssi:)"
-            landmarkType = "7">
+            startingLineNumber = "440"
+            endingLineNumber = "440"
+            landmarkName = "BindDeviceViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -714,11 +586,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/BindDeviceViewController.swift"
-            timestampString = "529842399.296085"
+            timestampString = "531829970.170557"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
             landmarkName = "myTimer()"
             landmarkType = "7">
          </BreakpointContent>
@@ -729,76 +601,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/UserViewController.swift"
-            timestampString = "529842399.296225"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/FirstViewController.swift"
-            timestampString = "529905524.945721"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "532"
-            endingLineNumber = "532"
-            landmarkName = "revECGdata(data:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/FirstViewController.swift"
-            timestampString = "529905524.945781"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "568"
-            endingLineNumber = "568"
-            landmarkName = "revECGdata(data:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/netUtil.swift"
-            timestampString = "529905524.945839"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "239"
-            endingLineNumber = "239"
-            landmarkName = "uploadECGfile(startTime:endTime:mode:bodyStatus:deviceSN:phone:deviceType:filedata:logFiledata:signalQualityFile:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/MainController.swift"
-            timestampString = "529905524.94627"
+            timestampString = "531829970.170904"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
             landmarkName = "getblestate()"
             landmarkType = "7">
          </BreakpointContent>
@@ -809,28 +617,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/BleDataAnalysis.swift"
-            timestampString = "529573427.658712"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
-            landmarkName = "revbledata(data:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/MainController.swift"
-            timestampString = "529905524.946369"
+            timestampString = "531829970.170978"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "MainController"
             landmarkType = "3">
             <Locations>
@@ -904,44 +696,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/FirstViewController.swift"
-            timestampString = "529905524.946431"
+            timestampString = "531887505.004911"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "296"
-            endingLineNumber = "296"
-            landmarkName = "sendcmd()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/BleDataAnalysis.swift"
-            timestampString = "529573427.658872"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
-            landmarkName = "revbledata(data:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/CommonUtils.swift"
-            timestampString = "529581120.841458"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
-            landmarkName = "int2data(num:)"
+            startingLineNumber = "447"
+            endingLineNumber = "447"
+            landmarkName = "sendpowercmd()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -952,7 +712,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/WatchTimeController.swift"
-            timestampString = "529841908.029324"
+            timestampString = "530517702.062219"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "61"
@@ -967,40 +727,8 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/SyncDataViewController.swift"
-            timestampString = "529905524.946564"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "299"
-            endingLineNumber = "299"
-            landmarkName = "sendOKStatus()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/BleDataAnalysis.swift"
-            timestampString = "529573427.659164"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "revbledata(data:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/WatchTimeController.swift"
-            timestampString = "529841908.029499"
+            timestampString = "530517702.06304"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "78"
@@ -1016,11 +744,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/BleTools.swift"
-            timestampString = "529842399.296872"
+            timestampString = "531829970.171414"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "328"
-            endingLineNumber = "328"
+            startingLineNumber = "375"
+            endingLineNumber = "375"
             landmarkName = "peripheral(_:didUpdateNotificationStateFor:error:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1032,11 +760,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/BleTools.swift"
-            timestampString = "529842399.296967"
+            timestampString = "531829970.171474"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "382"
-            endingLineNumber = "382"
+            startingLineNumber = "470"
+            endingLineNumber = "470"
             landmarkName = "peripheral(_:didUpdateValueFor:error:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1048,12 +776,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/DeviceUpdateViewController.swift"
-            timestampString = "529905524.94672"
+            timestampString = "531829970.171529"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "initdata()"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "initview()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1064,13 +792,77 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/netUtil.swift"
-            timestampString = "529905524.947286"
+            timestampString = "531050128.363431"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "185"
-            endingLineNumber = "185"
-            landmarkName = "getFirmware(type:mcufirwareVersion:)"
+            startingLineNumber = "233"
+            endingLineNumber = "233"
+            landmarkName = "devicedownload(fileurl:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/DeviceUpdateViewController.swift"
+            timestampString = "531829970.171791"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "292"
+            endingLineNumber = "292"
+            landmarkName = "sendbao()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/DeviceUpdateViewController.swift"
+            timestampString = "531829970.171852"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "249"
+            endingLineNumber = "249"
+            landmarkName = "updatedata(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/DeviceUpdateViewController.swift"
+            timestampString = "531829970.171907"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "263"
+            endingLineNumber = "263"
+            landmarkName = "updatedata(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/DeviceUpdateViewController.swift"
+            timestampString = "531829970.171961"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "286"
+            endingLineNumber = "286"
+            landmarkName = "DeviceUpdateViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

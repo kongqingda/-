@@ -15,9 +15,9 @@ enum batterynum : Int {
     case batterycharge = 4
 }
 class MainController: UITabBarController {
-    static var ThemeColor : UIColor =  #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)  //主题颜色
+    static var ThemeColor : UIColor =  #colorLiteral(red: 0, green: 0.6479217289, blue: 0.9158669099, alpha: 1)  //主题颜色
     static var isSendable : Bool = true //是否允许发送命令
-    
+    var isdimiss : Bool = false
     let bleorders : BleOrders = BleOrders()
     let toastview : ToastView = ToastView.instance
     static var softVer : String = ""
@@ -26,6 +26,7 @@ class MainController: UITabBarController {
     static var BINDPER : String? = nil
     
     override func viewDidLoad() {
+       
         super.viewDidLoad()
         self.navigationController?.navigationBar.barStyle = UIBarStyle.black;
         self.navigationController?.navigationBar.barTintColor = MainController.ThemeColor
@@ -34,12 +35,23 @@ class MainController: UITabBarController {
         BleDataAnalysis.shareInstance
         let userdefaults : UserDefaults = .standard
         MainController.BINDPER = userdefaults.string(forKey: "bindper")
+        if  MainController.BINDPER != nil{
+            let alert  = UIAlertController(title:"提示",message:"还未绑定设备请先绑定",preferredStyle:.alert)
+            let OKAction = UIAlertAction(title:"确定",style:.cancel){
+                (alertAction) -> Void in
+                alert.dismiss(animated: true, completion: nil)
+            }
+            alert.addAction(OKAction)
+            self.present(alert,animated: true,completion: nil)
+        }
+        
        // NotificationCenter.default.addObserver(self, selector: #selector(revdata(_:)), name: Notification.Name("REVDATA"), object: nil)
         if userdefaults.integer(forKey: "myhand")  == nil {
             userdefaults.set(0, forKey: "myhand")
             DrawLineView.myhand = hand.righthand
         }
         NotificationCenter.default.addObserver(self, selector: #selector(getblestate), name: Notification.Name("bleconn"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(closeAction), name: Notification.Name("closeapp"), object: nil)
         // Do any additional setup after loading the view.
     }
 
@@ -80,6 +92,11 @@ class MainController: UITabBarController {
             print("调时成功")
         }
     }
+    
+    func closeAction(){
+        removeNotification()
+        self.dismiss(animated: true, completion: nil)
+    }
     //定期执行的操作
     func sendcmd(){
         if BleTools.BTState == .ble_conn{
@@ -89,7 +106,9 @@ class MainController: UITabBarController {
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "batterymsg"), object: batterymsg)
         }
     }
-    
+    override func viewWillDisappear(_ animated: Bool) {
+        print("应用关闭")
+    }
     /*
     // MARK: - Navigation
 
@@ -100,4 +119,9 @@ class MainController: UITabBarController {
     }
     */
 
+    func removeNotification(){
+
+        NotificationCenter.default.removeObserver((Any).self)
+    }
+    
 }

@@ -1,14 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13533" systemVersion="16G1036" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="DiagnosisMsg" representedClassName="DiagnosisMsgManager" syncable="YES" codeGenerationType="class">
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ctrlType" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="dataId" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isread" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="properties" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="receiver" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sender" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sentTime" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
     <entity name="ECGData" representedClassName="ECGDataManager" syncable="YES" codeGenerationType="class">
+        <attribute name="dataId" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="date" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="deviceid" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="devicename" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="enddate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="fileurl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isread" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="isupdate" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="samplerate" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="startdate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="ECGmsg" representedClassName="ECGmsgManager" syncable="YES" codeGenerationType="class">
         <attribute name="datanum" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -25,9 +39,18 @@
         <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="stepnum" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
+    <entity name="Usermsg" representedClassName="UsermsgManager" syncable="YES" codeGenerationType="class">
+        <attribute name="binddate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bindmac" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bindname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bindper" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="ECGData" positionX="-63" positionY="-18" width="128" height="163"/>
-        <element name="ECGmsg" positionX="106" positionY="-9" width="128" height="118"/>
-        <element name="SensorData" positionX="108" positionY="123" width="128" height="133"/>
+        <element name="DiagnosisMsg" positionX="-92" positionY="198" width="128" height="165"/>
+        <element name="ECGData" positionX="-99" positionY="-36" width="128" height="225"/>
+        <element name="ECGmsg" positionX="99" positionY="-19" width="128" height="118"/>
+        <element name="SensorData" positionX="108" positionY="128" width="128" height="133"/>
+        <element name="Usermsg" positionX="9" positionY="117" width="128" height="120"/>
     </elements>
 </model>

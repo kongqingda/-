@@ -24,9 +24,7 @@ class BleDataAnalysis: NSObject,ManagerBledataDelegate{
     var length : Int = 0
     func revbledata(data: [UInt8]) {
         
-        if data.count<4{
-            return
-        }
+        
         if isbegin{
             for a in data{
                 alldata.append(a)
@@ -46,7 +44,15 @@ class BleDataAnalysis: NSObject,ManagerBledataDelegate{
                     case  0x35:
                         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "getallmsg"), object: alldata)
                     case 0x08:
-                        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "getECGupdatedata"), object: alldata)
+                        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "getECGupdatedata"), object: (512,alldata))
+                    case 0x04:
+                         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "getECGupdatedata"), object: (256,alldata))
+                    case 0x07:
+                        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "ecgdata"), object: (512,alldata))
+                    case 0x0F:
+                        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "ecgdata"), object: (256,alldata))
+                    case 0x05:
+                        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "gethistorysportdata"), object: alldata)
                     default:
                         break
                     }
@@ -60,7 +66,9 @@ class BleDataAnalysis: NSObject,ManagerBledataDelegate{
                 toastview.clear()
             }
         }
-        
+        if data.count<4{
+            return
+        }
         if  data[0] == 0x55 && data[1] == 0xAA {
             length = Int(data[2])+3
             alldata.removeAll()
@@ -86,14 +94,28 @@ class BleDataAnalysis: NSObject,ManagerBledataDelegate{
             case 0x36:
                 length = 996
                 print("解析当日步数统计")
+            case 0x05:
+                 print("解析历史步数统计")
             case 0x08:
-                print("解析手表上传的ECG数据")
+                print("解析手表上传的ECG数据 512")
+            case 0x04:
+                 print("解析手表上传的ECG数据 256")
             case 0x37:
                  print("归12点完成回复")
                 NotificationCenter.default.post(name: NSNotification.Name(rawValue: "back12msg"), object: batterymsg)
             case 0x30:
                  print("调节指针")
                 NotificationCenter.default.post(name: NSNotification.Name(rawValue: "adjusttimemsg"), object: data)
+            case 0x09:
+                print("数据升级包回复")
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "updatedata"), object: data)
+            case 0x07:
+                print("ECG数据521")
+            case 0x0F:
+                print("ECG数据256")
+            case 0x7F:
+                print("数据上传结束!")
+                 NotificationCenter.default.post(name: NSNotification.Name(rawValue: "endupdate"), object: data)
             default:
                 isbegin = false
                 length = 0

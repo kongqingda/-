@@ -19,10 +19,14 @@ class ToastView : NSObject{
     //显示加载
     func showLoadingView(content:String, duration:CFTimeInterval=6) {
         clear()
-        let frame = CGRect(x:0, y:0,width: 90, height:90)
+        let screen = UIScreen.main.bounds
         
+        //let backgroundview = UIView.init(frame: CGRect.init(x: 0, y: 0, width: screen.width, height: screen.height))
+        //backgroundview.backgroundColor = #colorLiteral(red: 0.9372549057, green: 0.9372549057, blue: 0.9568627477, alpha: 0.4042433647)
+        
+        let frame = CGRect(x:0, y:0,width: 90, height:90)
         let loadingContainerView = UIView()
-        loadingContainerView.layer.cornerRadius = 12
+        loadingContainerView.layer.cornerRadius = 10
         loadingContainerView.backgroundColor = UIColor(red:0, green:0, blue:0, alpha: 0.8)
         
         let indicatorWidthHeight :CGFloat = 36
@@ -30,6 +34,7 @@ class ToastView : NSObject{
         loadingIndicatorView.frame = CGRect(x:frame.width/2 - indicatorWidthHeight/2, y:frame.height/2 - indicatorWidthHeight/2-8, width:indicatorWidthHeight, height:indicatorWidthHeight)
         loadingIndicatorView.startAnimating()
         loadingContainerView.addSubview(loadingIndicatorView)
+       // backgroundview.addSubview(loadingContainerView)
         
         var toastContentView : UILabel!
         let textwidth = 15*content.characters.count
@@ -53,9 +58,8 @@ class ToastView : NSObject{
         window.center = CGPoint(x: (rv?.center.x)!, y: (rv?.center.y)!)
         window.isHidden = false
         window.addSubview(loadingContainerView)
-        
         windows.append(window)
-        
+        UIApplication.shared.keyWindow?.isUserInteractionEnabled = false
         //loadingContainerView.layer.add(AnimationUtil.getToastAnimation(duration: 1), forKey: "animation")
         perform(#selector(removeToast(_:)), with: window, afterDelay: duration)
         
@@ -103,6 +107,7 @@ class ToastView : NSObject{
     
     //移除当前弹窗
     func removeToast(_ sender: AnyObject) {
+        UIApplication.shared.keyWindow?.isUserInteractionEnabled = true
         if let window = sender as? UIWindow {
             if let index = windows.index(where: { (item) -> Bool in
                 return item == window
@@ -119,6 +124,7 @@ class ToastView : NSObject{
     func clear() {
         NSObject.cancelPreviousPerformRequests(withTarget: self)
         windows.removeAll(keepingCapacity: false)
+        UIApplication.shared.keyWindow?.isUserInteractionEnabled = true
     }
     //显示系统Alert弹窗
     func showAlert(_ message : String, _ uiview : UIViewController) {

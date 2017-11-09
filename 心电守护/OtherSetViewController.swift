@@ -17,10 +17,16 @@ class OtherSetViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let myhand = userdefaults.integer(forKey: "myhand")
+        let debug = userdefaults.bool(forKey: "isdebug")
         if myhand == hand.righthand.rawValue{
             isright.isOn = false
         }else{
             isright.isOn = true
+        }
+        if debug{
+             isdebug.isOn = true
+        }else{
+             isdebug.isOn = false
         }
 
         // Do any additional setup after loading the view.
@@ -48,13 +54,30 @@ class OtherSetViewController: UITableViewController {
     }
     @IBAction func ismobilenetaction(_ sender: UISwitch) {
     }
+    
     @IBAction func isdebugaction(_ sender: UISwitch) {
+        if sender.isOn{
+            userdefaults.set(true, forKey: "isdebug")
+        }else{
+            userdefaults.set(false, forKey: "isdebug")
+            
+        }
+        NotificationCenter.default.post(name: Notification.Name("isdebug"), object: sender.isOn)
+        userdefaults.synchronize()
     }
     @IBAction func quitaction(_ sender: Any) {
         if BleTools.bindperipheral != nil{
             BleTools.sharedInstance.disConnectDevice(per: BleTools.bindperipheral!)
         }
-        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true) {
+            NotificationCenter.default.post(name: Notification.Name("closeapp"), object: nil)
+            self.userdefaults.set(nil, forKey: "pwd")
+            self.userdefaults.set(nil, forKey: "phone")
+            self.userdefaults.set(nil, forKey: "bindmac")
+            self.userdefaults.set(nil, forKey: "bindper")
+            self.userdefaults.set(nil, forKey: "binddate")
+            self.userdefaults.set(nil, forKey: "bindname")
+        }
     }
 
 

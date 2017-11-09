@@ -12,6 +12,9 @@
 #import <AlgoSdk/NskAlgoSdk.h>
 #import "TGStreamDelegate.h"
 #import "TGStream.h"
+#import <KissXML/KissXML.h>
+#import <XMPPFramework/XMPP.h>
+
 
 
 

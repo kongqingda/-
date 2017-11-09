@@ -9,7 +9,8 @@
 import Foundation
 import CoreData
 
-class ECGmsgDao: CoreDataDAO {
+
+public class ECGmsgDao: CoreDataDAO{
     
     public static let sharedInstance: ECGmsgDao = {
         let instance = ECGmsgDao()

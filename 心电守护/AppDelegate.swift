@@ -31,13 +31,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             switch status {
             case .notReachable:
                 AppDelegate.netstyle = .notReachable
+                //net设置界面
+                let neturl = URL.init(string: "prefs:root=General&path=INTERNATIONAL")
+                if UIApplication.shared.canOpenURL(neturl!){
+                    UIApplication.shared.canOpenURL(neturl!)
+                }
+                
+
             case .unknown:
                AppDelegate.netstyle = .unknown
             case .reachable(.ethernetOrWiFi):
                 AppDelegate.netstyle = .ethernetOrWiFi
+                 XMPPUtil.sharedInstance.connect()//连接XMPP
             case .reachable(NetworkReachabilityManager.ConnectionType.wwan):
                 AppDelegate.netstyle = .wwan
-                
+                XMPPUtil.sharedInstance.connect()//连接XMPP
             }
         }
         NetworkManager!.startListening()
@@ -65,7 +73,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
-  
+        XMPPUtil.sharedInstance.disConnect()
     }
     
     

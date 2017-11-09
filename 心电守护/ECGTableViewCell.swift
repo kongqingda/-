@@ -10,12 +10,14 @@ import UIKit
 
 class ECGTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var maclabel: UILabel!
     @IBOutlet weak var enddatelabel: UILabel!
     @IBOutlet weak var startdatelabel: UILabel!
     @IBOutlet weak var devicename: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        //maclabel.isHidden = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

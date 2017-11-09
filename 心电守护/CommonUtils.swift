@@ -60,6 +60,16 @@ public class CommonUtils{
         }
 
     }
+    static func byte2int16(data : [UInt8]) -> Int16{
+        if data.count == 2{
+            let temp  : Int16 = Int16(data[0])
+                + Int16(data[1]) << 8
+            return  temp;
+        }else {
+            return 0
+        }
+        
+    }
     
     static func copyofRange(data:[UInt8],from:Int,to:Int) ->[UInt8]{
         var result : [UInt8] = []
@@ -71,6 +81,11 @@ public class CommonUtils{
     static func int2data(num : Int) -> [UInt8]{
         var data : [UInt8] = []
         data = [UInt8((num) & 0xff),UInt8((num >> 8) & 0xff),UInt8((num >> 16) & 0xff),UInt8((num >> 24) & 0xff)]
+        return data
+    }
+    static func Int2bigEndian(num : Int16) -> [UInt8]{
+        var data : [UInt8] = []
+        data = [UInt8((num >> 8) & 0xff),UInt8((num) & 0xff)]
         return data
     }
 

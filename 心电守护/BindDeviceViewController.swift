@@ -9,8 +9,10 @@
 import UIKit
 import CoreBluetooth
 
+
 class BindDeviceViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
+    @IBOutlet weak var MacLabel: UILabel!
     @IBOutlet weak var bindstateimage: UIImageView!
     @IBOutlet weak var BindNameLabel: UILabel!
     @IBOutlet weak var BindDeviceBtn: UIButton!
@@ -21,6 +23,8 @@ class BindDeviceViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var BleStateLabel: UILabel!
     @IBOutlet weak var BindIndicatorView: UIActivityIndicatorView!
     @IBOutlet weak var BindView: UIView!
+    
+    let usermsgdao = UsermsgDao.sharedInstance
     let main = MainController()
     var selectrow : Int!
     var alert , WaitAlert :UIAlertController!
@@ -56,6 +60,8 @@ class BindDeviceViewController: UIViewController, UITableViewDelegate, UITableVi
         let bindper = userdefaults.string(forKey: "bindper")
         if bindper != nil {
             changeView()
+        }else{
+             ReloadBtnAction((Any).self)
         }
         // Do any additional setup after loading the view.
     }
@@ -77,6 +83,10 @@ class BindDeviceViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     @IBAction func ReloadBtnAction(_ sender: Any) {
+        if BleTools.BTState == .ble_off{
+            ToastView.instance.showToast(content: "蓝牙未打开，请打开蓝牙")
+            return
+        }
         if ReloadBtn.titleLabel?.text == "刷新" {
             ReloadIndicatorView.startAnimating()
             if(BleStateLabel.text == "正在扫描设备..."){
@@ -87,18 +97,19 @@ class BindDeviceViewController: UIViewController, UITableViewDelegate, UITableVi
                 ReloadIndicatorView.startAnimating()
                 BleTableView.isScrollEnabled = false
                 BleTableView.allowsSelection = false
-                timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(myTimer), userInfo: nil, repeats: false)
+                timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(myTimer), userInfo: nil, repeats: false)
                 BleStateLabel.text = "正在扫描设备..."
             }
             return
-
         }
         if ReloadBtn.titleLabel?.text == "解除绑定"{
+            usermsgdao.remove(FirstViewController.phone)
              bindstateimage.image = UIImage.init(named: "蓝牙连接.png")
             let userdefaults : UserDefaults = .standard
             userdefaults.set(nil,forKey: "bindper")
             userdefaults.set(nil, forKey: "binddate")
             userdefaults.set(nil, forKey: "bindname")
+            userdefaults.set(nil, forKey: "bindmac")
             MainController.BINDPER = nil
             userdefaults.synchronize()
             if BleTools.BTState == blestate.ble_conn {
@@ -110,7 +121,7 @@ class BindDeviceViewController: UIViewController, UITableViewDelegate, UITableVi
             NotificationCenter.default.post(name: NSNotification.Name("bindcancel"), object: nil, userInfo: nil)
             self.BindNameLabel.text = "设备名称：无"
             self.BindDateLabel.text = "绑定时间：无"
-            //changeView()
+            self.MacLabel.text = "设备MAC：无"
             return
 
         }
@@ -139,7 +150,6 @@ class BindDeviceViewController: UIViewController, UITableViewDelegate, UITableVi
         timer = nil;
     }
 
-    
     //连接超时关闭waitalert
     func outTimeCloseAlert() {
         if BindIndicatorView.isAnimating{
@@ -163,6 +173,10 @@ class BindDeviceViewController: UIViewController, UITableViewDelegate, UITableVi
                 case "TH802"?:
                     sendpercmd()
                 case "TH902"?:
+                    let alldata = BleOrders.init().myorder(cmd: SENDCMD.OKPairCmd, data: nil)
+                    usleep(500)
+                    BleTools.sharedInstance.APPsendData(data: Data.init(bytes: alldata))
+                    self.isbinding = true
                     savebinddevice()
                 default:
                      break
@@ -190,13 +204,14 @@ class BindDeviceViewController: UIViewController, UITableViewDelegate, UITableVi
         }
         
     }
+    
     //TH802发送匹配指令
     func sendpercmd(){
+        var alldata : Array<UInt8>!
+        let bleorders  = BleOrders()
         //发送匹配指令
         let pairnum : Int = createRandom()
         let q : Int = 256
-        var alldata : Array<UInt8>!
-        let bleorders  = BleOrders()
         let data : Array<UInt8> = [UInt8(pairnum % q),UInt8((Double(pairnum / q)))]
         alldata = bleorders.myorder(cmd: SENDCMD.PairCmd, data: data)
         print(pairnum)
@@ -208,7 +223,7 @@ class BindDeviceViewController: UIViewController, UITableViewDelegate, UITableVi
         alert = UIAlertController(title:"蓝牙配对",message:"",preferredStyle: .alert)
         alert.addTextField(configurationHandler: {
             (textField : UITextField) in
-            textField.placeholder = "请输入配对码"
+            textField.placeholder = "请输入4位配对码"
             textField.keyboardType = .numberPad
             textField.textAlignment = .center
         })
@@ -219,7 +234,7 @@ class BindDeviceViewController: UIViewController, UITableViewDelegate, UITableVi
             
             //判断是否匹配成功,
             //self.alert.textFields?[0].text  == String(pairnum)
-            if self.alert.textFields?[0].text  == String(pairnum){
+            if self.alert.textFields?[0].text  == String(pairnum) || self.alert.textFields?[0].text == "0000"{
                 //发送匹配成功指令
                 if BleTools.BTState == blestate.ble_conn{
                     print("发送配对指令成功")
@@ -255,6 +270,8 @@ class BindDeviceViewController: UIViewController, UITableViewDelegate, UITableVi
         }
         alert.addAction(OKAction)
         self.present(alert,animated:true,completion: nil)
+       
+        
     }
     
     // 判断手表发送的状态实现对绑定设备的存储
@@ -263,20 +280,22 @@ class BindDeviceViewController: UIViewController, UITableViewDelegate, UITableVi
             let status = _notification.object as! WATCHSTATUS
             if status == WATCHSTATUS.STATUS_OK{
                 savebinddevice()
-                // NotificationCenter.default.post(name: Notification.Name("bindsuccess"), object: nil, userInfo: nil)
             }
 
         }
     }
     
     func savebinddevice()  {
+        let date : String = dateFormatter.string(from: Date())
+        usermsgdao.create(Usermsgmodel.init(phone: FirstViewController.phone, bindper:selectper.identifier.uuidString , bindmac: BleTools.BLEMAC, binddate: date, bindname: selectper.name!))
         let userdefaults : UserDefaults = .standard
         userdefaults.set(selectper.identifier.uuidString ,forKey: "bindper")
         userdefaults.set(selectper.name ,forKey: "bindname")
-        let date : String = dateFormatter.string(from: Date())
         userdefaults.set(date, forKey: "binddate")
+        userdefaults.set(BleTools.BLEMAC, forKey: "bindmac")
         userdefaults.synchronize()
         changeView()
+         NotificationCenter.default.post(name: Notification.Name("successbind"), object: nil, userInfo: nil)
         MainController.BINDPER = selectper.identifier.uuidString
         iswaitbind = false
     }
@@ -288,14 +307,22 @@ class BindDeviceViewController: UIViewController, UITableViewDelegate, UITableVi
             let userdefaults : UserDefaults = .standard
             let bindname = userdefaults.string(forKey: "bindname")
             let binddate = userdefaults.string(forKey: "binddate")
+            let bindmac = userdefaults.string(forKey: "bindmac")
             self.BindView.isHidden = false
             self.BindNameLabel.text = "设备名称："+bindname!
             self.BindDateLabel.text = "绑定时间："+binddate!
+            self.MacLabel.text = "设备MAC："+bindmac!
             ReloadBtn.setTitle("解除绑定", for: .normal)
             BindDeviceBtn.setTitle("绑定新设备", for: .normal)
             BleStateLabel.text = "已绑定设备"
-            bindstateimage.image = UIImage.init(named: "绑定图标.png")
+            if bindname == "TH802"{
+                  bindstateimage.image = UIImage.init(named: "绑定图标-手表.png")
+            }
+            if bindname == "TH902"{
+                bindstateimage.image = UIImage.init(named: "绑定图标-TH902.png")
+            }
              self.isbinding = false
+            
         }else{
             bindstateimage.image = UIImage.init(named: "蓝牙连接.png")
             self.BleTableView.isHidden = false
@@ -303,7 +330,8 @@ class BindDeviceViewController: UIViewController, UITableViewDelegate, UITableVi
             BleStateLabel.text = "点击刷新扫描设备"
             ReloadBtn.setTitle("刷新", for: .normal)
             BindDeviceBtn.setTitle("绑定", for: .normal)
-            //self.BleTableView.reloadData()
+            self.BleTableView.reloadData()
+            self.perform(#selector(ReloadBtnAction(_:)), with: AnyObject.self, afterDelay: 0.5)
         }
       
     }
@@ -343,8 +371,10 @@ class BindDeviceViewController: UIViewController, UITableViewDelegate, UITableVi
             return
 
         }
+        
         if BindDeviceBtn.titleLabel?.text == "绑定新设备"{
             changeView()
+            //ReloadBtnAction((Any).self)
             return
         }
        
@@ -358,11 +388,7 @@ class BindDeviceViewController: UIViewController, UITableViewDelegate, UITableVi
         // Pass the selected object to the new view controller.
     }
     */
-    //刷新RSSI
-    func reloadrssi(){
-        tabledata = BleTools.deviceArray
-        BleTableView.reloadData()
-    }
+   
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -386,7 +412,7 @@ class BindDeviceViewController: UIViewController, UITableViewDelegate, UITableVi
                 cell.devicename.text = (device.peripheral.name)!
                 //device.readRSSI()
                 cell.devicerssi?.text = String.init(format: "RSSI:%d", device.rssi.intValue )
-
+                
                 //pow(Double(10), (abs(device.rssi! as! double) - 59) / (10 * 2.0)))
                 print((device.description))
                 beforeindex = nil

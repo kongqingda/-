@@ -18,6 +18,7 @@ let UUID_CLIENT_CHARACTERISTIC_CONFIG = "2902"
 
 let UUID_Device_SERVICE = "180A"
 let UUID_SOFTREV_CHAR = "2A28"
+let UUID_MAC = "2A23"
 let UUID_SN  = "2A25"
 var UUID_SERVICE : CBUUID!
 var UUID_CHARACTERISTIC_READ : CBUUID!
@@ -58,13 +59,15 @@ class BleTools: NSObject,CBPeripheralDelegate, CBCentralManagerDelegate{
     static var characteristicRx : CBCharacteristic?
     var chasoft : CBCharacteristic?
     var chasn : CBCharacteristic?
+    var chamac : CBCharacteristic?
     
     var deviceTx : CBCharacteristic?
     var deviceRx : CBCharacteristic?
     var deviceSx : CBCharacteristic?
     static var SOFTVERSION : String = "v1.0.0"
     static var DEVICESN : String = "1.0.0"
-    
+    static var DEVICEMAC : String = "1.0.0"
+    static var BLEMAC : String = "1.0.0"
     let toastview : ToastView = ToastView.instance
     static var peripheralArray: Array = [CBPeripheral]();
     static var deviceArray : Array = [DeviceData]()
@@ -81,6 +84,8 @@ class BleTools: NSObject,CBPeripheralDelegate, CBCentralManagerDelegate{
     let uuidDeviceService = CBUUID.init(string: UUID_Device_SERVICE)
     let uuidSoftRevChar = CBUUID.init(string: UUID_SOFTREV_CHAR)
     let uuidSN = CBUUID.init(string: UUID_SN)
+    let uuidMAC = CBUUID.init(string: UUID_MAC)
+    let baocount = 20 //蓝牙发送每包的字节数
     
     // 初始化蓝牙
     func initBlueTooth() {
@@ -108,19 +113,39 @@ class BleTools: NSObject,CBPeripheralDelegate, CBCentralManagerDelegate{
         BleTools.centralManager!.connect(per, options: nil);
         myperipheral = per;
     }
+    func senddata(_ sender : AnyObject){
+        let data = sender as! [UInt8]
+        var senddata : Data!
+        for i in 0..<data.count/baocount{
+            senddata = Data.init(bytes: CommonUtils.copyofRange(data: data, from: i*baocount, to: (i+1)*baocount-1))
+            myperipheral?.writeValue(senddata, for: BleTools.characteristicTx!, type: CBCharacteristicWriteType.withResponse)
+        }
+        let n = data.count%baocount
+        if n > 0{
+            senddata = Data.init(bytes: CommonUtils.copyofRange(data: data, from: data.count-n, to: data.count-1))
+            myperipheral?.writeValue(senddata, for: BleTools.characteristicTx!, type: CBCharacteristicWriteType.withResponse)
+        }
+        NotificationCenter.default.post(name: Notification.Name("sendbao"), object: nil)
+        print("发送包的通知➡️")
+    }
     
     //发送数据
     func APPsendData(data:Data) -> Void {
        print(data)
         if BleTools.BTState == blestate.ble_conn{
-            myperipheral?.writeValue(data, for: BleTools.characteristicTx!, type: CBCharacteristicWriteType.withResponse)
-            print([UInt8](data))
-
+            let byte = [UInt8](data)
+            if byte.count > baocount{
+                let sendThread = Thread.init(target: self, selector: #selector(senddata(_ :)), object: byte)
+                sendThread.start()
+            }else{
+                myperipheral?.writeValue(data, for: BleTools.characteristicTx!, type: CBCharacteristicWriteType.withResponse)
+            }
         }else{
             toastview.showToast(content: "请检查蓝牙连接！")
         }
         
     }
+    
     
     //  断开连接
     func disConnectDevice(per:CBPeripheral) {
@@ -135,10 +160,19 @@ class BleTools: NSObject,CBPeripheralDelegate, CBCentralManagerDelegate{
         switch central.state {
         case .poweredOn:
             print("蓝牙状态已经打开！")
+            BleTools.BTState = blestate.ble_on
+            NotificationCenter.default.post(name: Notification.Name("bleconn"), object: nil, userInfo: nil)
         case .poweredOff:
             print("蓝牙状态关闭！")
             BleTools.BTState = blestate.ble_off
              NotificationCenter.default.post(name: Notification.Name("bleconn"), object: nil, userInfo: nil)
+            //蓝牙设置界面
+            
+            let bleurl = URL.init(string: "prefs:root=Bluetooth")
+            if UIApplication.shared.canOpenURL(bleurl!){
+                UIApplication.shared.canOpenURL(bleurl!)
+            }
+
         case .unsupported:
             print("不支持蓝牙！")
         default:
@@ -176,23 +210,21 @@ class BleTools: NSObject,CBPeripheralDelegate, CBCentralManagerDelegate{
     }
     //更新RSSI的回调
     func peripheral(_ peripheral: CBPeripheral, didReadRSSI RSSI: NSNumber, error: Error?) {
-        for i  in 0 ..< BleTools.peripheralArray.count{
-            
-            if BleTools.peripheralArray[i] == peripheral{
-                peripheral.readRSSI()
-                BleTools.peripheralArray[i] = peripheral
-                print("蓝牙RSSI值\(RSSI)")
-                NotificationCenter.default.post(name: Notification.Name("reloadlist"), object: nil, userInfo: nil)
-            }
-            
+
+            if BleTools.bindperipheral == peripheral{
                 
+                print("蓝牙RSSI值\(RSSI)")
+                NotificationCenter.default.post(name: Notification.Name("reloadRSSI"), object: RSSI)
         }
     }
+        
+        
     // 连接外设成功回调        如果连接成功扫描服务
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
         print("已经连接上了外设！")
         stopScanDevice()
         BleTools.bindperipheral = peripheral
+        peripheral.readRSSI()
         peripheral.discoverServices([uuidHelloService,uuidDeviceService])
         print(String.init(format: "连接了%@",peripheral.name!))
         
@@ -231,7 +263,7 @@ class BleTools: NSObject,CBPeripheralDelegate, CBCentralManagerDelegate{
                     print("1现在开始去搜寻服务UUID=\(service.uuid)中的特征！")
                 }
                 if (service.uuid.uuidString == UUID_Device_SERVICE) {
-                    peripheral.discoverCharacteristics([uuidSoftRevChar,uuidSN], for: service)
+                    peripheral.discoverCharacteristics([uuidSoftRevChar,uuidSN,uuidMAC], for: service)
                     print("2现在开始去搜寻服务UUID=\(service.uuid)中的特征！")
                 }
             }
@@ -281,6 +313,7 @@ class BleTools: NSObject,CBPeripheralDelegate, CBCentralManagerDelegate{
     func didFindDeviceDonfig(service : CBService){
         chasn = nil
         chasoft = nil
+        chamac = nil
         print("2正在特征分配")
         let chaArry:[CBCharacteristic] = service.characteristics!
         for cha:CBCharacteristic in chaArry {
@@ -293,6 +326,20 @@ class BleTools: NSObject,CBPeripheralDelegate, CBCentralManagerDelegate{
                 myperipheral?.readValue(for: cha)
                 chasn = cha
             }
+            if cha.uuid.isEqual(uuidMAC){
+                myperipheral?.readValue(for: cha)
+                chamac = cha
+            }
+        }
+        
+    }
+    
+    //读取软件版本值
+    func readSoftVersion(){
+        if myperipheral != nil && chasoft != nil{
+            myperipheral?.readValue(for: chasoft!)
+        }else{
+            ToastView.instance.showToast(content: "获取手表固件版本失败")
         }
         
     }
@@ -329,7 +376,7 @@ class BleTools: NSObject,CBPeripheralDelegate, CBCentralManagerDelegate{
         }
         
     }
-    
+   
     
     // 接收从外设发来的数据   不管是通知还是读取都是从以下方法中获取数据
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
@@ -348,8 +395,49 @@ class BleTools: NSObject,CBPeripheralDelegate, CBCentralManagerDelegate{
             if characteristic.uuid == uuidSN{
                 let allData : Data = characteristic.value!;
                 print("2接收到从外设发来的数据了！")
-                BleTools.DEVICESN = String.init(data: allData, encoding: String.Encoding.utf8)!
-                print(BleTools.DEVICESN)
+//                do{
+//                    BleTools.DEVICESN = try String.init(data: allData, encoding: String.Encoding.utf8)!
+//                    print(BleTools.DEVICESN)
+//                }catch _{
+//
+//                }
+                
+            }
+            if characteristic.uuid == uuidMAC{
+                 var macarray : NSMutableString = NSMutableString()
+                 var macarray2 : NSMutableString = NSMutableString()
+                //获取MAC地址
+                let allData : NSString = NSString.init(format: "%@",characteristic.value! as CVarArg )
+                print("2接收到从外设发来的数据了！")
+//                BleTools.DEVICEMAC = String.init(data: allData, encoding: String.Encoding.utf8)!
+//                print(BleTools.DEVICEMAC)
+                macarray.append(allData.substring(with: NSMakeRange(16, 2)).uppercased())
+                macarray.append("-")
+                macarray.append(allData.substring(with: NSMakeRange(14, 2)).uppercased())
+                macarray.append("-")
+                macarray.append(allData.substring(with: NSMakeRange(12, 2)).uppercased())
+                macarray.append("-")
+                macarray.append(allData.substring(with: NSMakeRange(5, 2)).uppercased())
+                macarray.append("-")
+                macarray.append(allData.substring(with: NSMakeRange(3, 2)).uppercased())
+                macarray.append("-")
+                macarray.append(allData.substring(with: NSMakeRange(1, 2)).uppercased())
+                BleTools.DEVICEMAC = macarray as String
+                print(BleTools.DEVICEMAC)
+                
+                macarray2.append(allData.substring(with: NSMakeRange(16, 2)).uppercased())
+                macarray2.append(":")
+                macarray2.append(allData.substring(with: NSMakeRange(14, 2)).uppercased())
+                macarray2.append(":")
+                macarray2.append(allData.substring(with: NSMakeRange(12, 2)).uppercased())
+                macarray2.append(":")
+                macarray2.append(allData.substring(with: NSMakeRange(5, 2)).uppercased())
+                macarray2.append(":")
+                macarray2.append(allData.substring(with: NSMakeRange(3, 2)).uppercased())
+                macarray2.append(":")
+                macarray2.append(allData.substring(with: NSMakeRange(1, 2)).uppercased())
+                BleTools.BLEMAC = macarray2 as String
+                print(BleTools.BLEMAC)
             }
             
             if characteristic.uuid == uuidHelloDataReceive {
@@ -390,14 +478,15 @@ class BleTools: NSObject,CBPeripheralDelegate, CBCentralManagerDelegate{
     
     //  向外设写入数据成功的回调
     func peripheral(_ peripheral: CBPeripheral, didWriteValueFor characteristic: CBCharacteristic, error: Error?) {
-        print("发送数据成功")
+       
         if error != nil {
             print("为名字为：\(peripheral.name)的设备，UUID为\(characteristic.uuid)的特征写入数据时失败！失败原因：\(error)")
         }else{
             BleTools.bindperipheral = peripheral
              BleTools.BTState = blestate.ble_conn
             print("为名字为：\(peripheral.name)的设备，UUID为\(characteristic.uuid)的特征写入数据成功！")
-            
+            print(characteristic)
+             print("发送数据成功")
         }
     }
     

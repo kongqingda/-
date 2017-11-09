@@ -20,6 +20,8 @@ class DrawBackView: UIView {
         viewwidth = rect.size.width
         
         viewheight = rect.size.height
+        layer.borderColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
+        layer.borderWidth = 0.5
         
         UIColor.white.setFill()
         UIRectFill(rect)
@@ -58,7 +60,7 @@ class DrawBackView: UIView {
             context!.addLine(to: CGPoint(x:jianw * CGFloat(h),y:viewheight))
         }
         context!.setLineWidth(0.3)
-        UIColor.init(cgColor: #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)).setStroke()
+        UIColor.init(cgColor: #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)).setStroke()
         context!.drawPath(using: .stroke)
 
     }

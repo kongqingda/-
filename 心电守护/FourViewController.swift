@@ -21,6 +21,7 @@ class FourViewController: UITableViewController {
         self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         NotificationCenter.default.addObserver(self, selector: #selector(getallmsg(_:)), name: Notification.Name("getallmsg"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(hinddataupdate), name: Notification.Name("isclearupdata"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(closeAction), name: Notification.Name("closeapp"), object: nil)
         watchupdate.isHidden = true
         dataupdate.isHidden = true
         if BleTools.BTState == .ble_conn{
@@ -47,7 +48,10 @@ class FourViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 10
     }
-    
+    func closeAction(){
+        removeNotification()
+        self.dismiss(animated: true, completion: nil)
+    }
     func senddata(){
         BleTools.sharedInstance.APPsendData(data: Data.init(bytes: bleorders.myorder(cmd: SENDCMD.GetAllMessageCmd, data: nil)) )
     }
@@ -61,5 +65,8 @@ class FourViewController: UITableViewController {
         }
     }
     
+    func removeNotification(){
+       NotificationCenter.default.removeObserver(self)
+    }
 
 }

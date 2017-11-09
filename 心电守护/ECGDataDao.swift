@@ -14,7 +14,6 @@ class ECGDataDao: CoreDataDAO {
     
     public static let sharedInstance: ECGDataDao = {
         let instance = ECGDataDao()
-        
         return instance
     }()
  //插入方法
@@ -34,6 +33,10 @@ class ECGDataDao: CoreDataDAO {
         ecgdata.isupdate = model.isupdate
         ecgdata.deviceid = model.deviceid
         ecgdata.devicename = model.devicename
+        ecgdata.dataId = model.dataId!
+        ecgdata.isread = model.isread
+        ecgdata.username = model.username
+        ecgdata.samplerate = model.samplerate!
         //保存数据
         self.saveContext()
         let ecgmsg = ecgmsgdao.findByDate(model.date!, model.phone!)
@@ -68,7 +71,8 @@ class ECGDataDao: CoreDataDAO {
                 
                 for item in listData {
                     let mo = item as! ECGDataManager
-                    let ecgdata = ECGdata.init(date: mo.date!, enddate: mo.enddate!, fileurl: mo.fileurl!, isupdate: mo.isupdate, startdate: mo.startdate!, phone: mo.phone!,devicename: mo.devicename!,deviceid: mo.deviceid!)
+                    //let ecgdata = ECGdata.init(date: mo.date!, enddate: mo.enddate!, fileurl: mo.fileurl!, isupdate: mo.isupdate, startdate: mo.startdate!, phone: mo.phone!,devicename: mo.devicename!,deviceid: mo.deviceid!)
+                    let ecgdata = ECGdata.init(date: mo.date!, enddate: mo.enddate!, fileurl: mo.fileurl!, isupdate: mo.isupdate, startdate: mo.startdate!, phone: mo.phone!,devicename: mo.devicename!,deviceid: mo.deviceid!, dataId: mo.dataId, isread: mo.isread, username: mo.username!,samplerate : mo.samplerate)
                     resListData.add(ecgdata)
                 }
             }
@@ -102,7 +106,7 @@ class ECGDataDao: CoreDataDAO {
             
              for item in listData{
                 let mo = item as! ECGDataManager
-                let ecgdata = ECGdata.init(date: mo.date!, enddate: mo.enddate!, fileurl: mo.fileurl!, isupdate: mo.isupdate, startdate: mo.startdate!, phone: mo.phone!,devicename: mo.devicename!,deviceid: mo.deviceid!)
+                let ecgdata = ECGdata.init(date: mo.date!, enddate: mo.enddate!, fileurl: mo.fileurl!, isupdate: mo.isupdate, startdate: mo.startdate!, phone: mo.phone!,devicename: mo.devicename!,deviceid: mo.deviceid!, dataId: mo.dataId, isread: mo.isread, username: mo.username!,samplerate : mo.samplerate)
                 resListData.add(ecgdata)
             }
             return resListData

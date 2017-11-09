@@ -35,7 +35,7 @@ class SensorDataDao: CoreDataDAO {
             sensordata.stepnum = model.stepnum
             //保存数据
             self.saveContext()
-        let alldata = findAll(phone: model.phone!)
+        let alldata = findAll(phone: model.phone!, style: "all")
             if alldata.count>0{
                 for i in alldata{
                     let data = i as! Sensordatamodel
@@ -75,7 +75,7 @@ class SensorDataDao: CoreDataDAO {
     }
     
     //查询所有数据方法
-    public func findAll(phone:String) -> NSMutableArray {
+    public func findAll(phone:String,style: String) -> NSMutableArray {
         
         let context = persistentContainer.viewContext
         
@@ -83,24 +83,57 @@ class SensorDataDao: CoreDataDAO {
         
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>()
         fetchRequest.entity = entity
-        
-        let sortDescriptor = NSSortDescriptor(key:"date", ascending:true)
+        fetchRequest.predicate = NSPredicate(format: "phone = %@",phone)
+        let sortDescriptor = NSSortDescriptor(key:"date", ascending:false)
         let sortDescriptors = [sortDescriptor]
         fetchRequest.sortDescriptors = sortDescriptors
-        fetchRequest.predicate = NSPredicate(format: "phone = %@",phone)
         let resListData = NSMutableArray()
         
         do {
             let listData = try context.fetch(fetchRequest)
-            
-            if listData.count > 0 {
-                
+            if style == "week"{
+                if listData.count >= 7{
+                    
+                    for i in 0..<7 {
+                        let item = listData[i]
+                        let mo = item as! SensorDataManager
+                        let sensordata = Sensordatamodel.init(date: mo.date!, fileurl: mo.fileurl!, isupdate: mo.isupdate, phone: mo.phone!,deviceid: mo.deviceid!,stepnum: mo.stepnum)
+                        resListData.add(sensordata)
+                    }
+                }else{
+                    for item in listData {
+                        let mo = item as! SensorDataManager
+                        let sensordata = Sensordatamodel.init(date: mo.date!, fileurl: mo.fileurl!, isupdate: mo.isupdate, phone: mo.phone!,deviceid: mo.deviceid!,stepnum: mo.stepnum)
+                        resListData.add(sensordata)
+                    }
+                }
+            }
+            if style == "month"{
+                if listData.count >= 30{
+                    
+                    for i in 0..<30 {
+                        let item = listData[i]
+                        let mo = item as! SensorDataManager
+                        let sensordata = Sensordatamodel.init(date: mo.date!, fileurl: mo.fileurl!, isupdate: mo.isupdate, phone: mo.phone!,deviceid: mo.deviceid!,stepnum: mo.stepnum)
+                        resListData.add(sensordata)
+                    }
+                }else{
+                    for item in listData {
+                        let mo = item as! SensorDataManager
+                        let sensordata = Sensordatamodel.init(date: mo.date!, fileurl: mo.fileurl!, isupdate: mo.isupdate, phone: mo.phone!,deviceid: mo.deviceid!,stepnum: mo.stepnum)
+                        resListData.add(sensordata)
+                    }
+                }
+            }
+            if style == "all"{
                 for item in listData {
                     let mo = item as! SensorDataManager
                     let sensordata = Sensordatamodel.init(date: mo.date!, fileurl: mo.fileurl!, isupdate: mo.isupdate, phone: mo.phone!,deviceid: mo.deviceid!,stepnum: mo.stepnum)
                     resListData.add(sensordata)
                 }
             }
+            
+          
         } catch {
             NSLog("查询数据失败")
         }
@@ -120,7 +153,9 @@ class SensorDataDao: CoreDataDAO {
         
         do {
             let listData = try context.fetch(fetchRequest)
-            
+            if listData.count == 0{
+                return nil
+            }
             for item in listData{
                 let mo = item as! SensorDataManager
                 let sensordata = Sensordatamodel.init(date: mo.date!, fileurl: mo.fileurl!, isupdate: mo.isupdate, phone: mo.phone!,deviceid: mo.deviceid!,stepnum: mo.stepnum)

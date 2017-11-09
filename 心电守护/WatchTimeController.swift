@@ -141,6 +141,7 @@ class WatchTimeController: UIViewController {
         operatorstep += 1
         switch operatorstep {
         case 1:
+            self.view.layer.removeAllAnimations()
             WatchimageView.layer.add(AnimationUtil.getImageChangeAnimation(), forKey: "animation")
             cmdThread = Thread.init(target: self, selector: #selector(resendcmd), object: nil)
             cmdThread.start()
@@ -149,6 +150,7 @@ class WatchTimeController: UIViewController {
             rightbtn.isEnabled = false
             leftbtn.isEnabled = false
         case 2:
+           self.view.layer.removeAllAnimations()
            WatchimageView.layer.add(AnimationUtil.getImageChangeAnimation(), forKey: "animation")
             timeprogress.isHidden = true
              textimage.image = UIImage.init(named: "移动时针.png")
