@@ -37,11 +37,9 @@ class FirstViewController: UIViewController ,NskAlgoSdkDelegate{
     
     var time : Int = 0
     var sdkstate : NskAlgoState = .stop
+    var algoTypes: NskAlgoType = NskAlgoType(rawValue: 2)!
     static var SAMPLERATE = 512
-    var alogdata : [Int16] = []
     var ECGlist : [Int] = []//ECG数据
-    var Sensorlist : Array<Int> = []//Sensor数据
-    var ECGSensorlist : Array<Int> = [] //ECG+Sensor的混合原始数据，包含包序号
     var drawlist : Array<Int> = []//画线使用的数据
     var exitRawThread : Bool = true
     var timer , addtimer : Timer!
@@ -52,6 +50,9 @@ class FirstViewController: UIViewController ,NskAlgoSdkDelegate{
     var startdate : Date!
     var connstate : blestate = blestate.ble_disconn //连接状态
     var scale : Int = 10
+    var drawTimer : Timer!
+    var drawnum : Int = 0
+    
     
     let dateFormatter = DateFormatter()
    
@@ -141,7 +142,7 @@ class FirstViewController: UIViewController ,NskAlgoSdkDelegate{
                 BleStateLabel.isHidden = false
                 ConnBleBtn.isHidden = false
                 ConnBleBtn.setTitle("未连接", for: .normal)
-                BleStateLabel.text = "蓝牙未打开，请打开蓝牙"
+                BleStateLabel.text = "蓝牙未打开(｡ ́︿ ̀｡) 上划👆打开蓝牙"
                 WaitIndicatorView.isHidden = true
                 
             case .ble_conn:
@@ -242,7 +243,15 @@ class FirstViewController: UIViewController ,NskAlgoSdkDelegate{
         for _ in license.count ..< 128{
             license.append(0)
         }
+        
         if alogsdk.setAlgorithmTypes(.ecgTypeHeartRate, licenseKey: &license) != 0{
+            
+            print("开启ALogSDK错误")
+        }
+       
+        algoTypes = .ecgTypeSmooth
+        //algoTypes = .ecgTypeHeartRate
+        if alogsdk.setAlgorithmTypes(algoTypes, licenseKey: &license) != 0{
             
             print("开启ALogSDK错误")
         }
@@ -371,6 +380,8 @@ class FirstViewController: UIViewController ,NskAlgoSdkDelegate{
    
     var errorCRC = 0
     var errorSN = 0
+    
+    
     //计数器工作，如果接受到心电数据开始计时
     func addtime()  {
         if BleTools.bindperipheral != nil{
@@ -416,12 +427,16 @@ class FirstViewController: UIViewController ,NskAlgoSdkDelegate{
                 alogsdk.pauseProcess()
                 exitRawThread = true
                 saveECGDate()
-                self.Sensorlist.removeAll()
                 self.ECGlist.removeAll()
-                self.ECGSensorlist.removeAll()
                 HeartRateLabel.text = "实时心率：--- bpm"
 
                 self.drawlineview.drawData = []
+                if drawTimer != nil{
+                    drawTimer.invalidate()
+                    drawTimer = nil
+                }
+                
+                self.drawnum = 0
                 self.drawlineview.setNeedsDisplay()
             }
         }else{
@@ -536,8 +551,6 @@ class FirstViewController: UIViewController ,NskAlgoSdkDelegate{
     func getecgdata(_ notification : Notification){
 
         self.baodata.removeAll()
-        self.Sensorlist.removeAll()
-        self.ECGSensorlist.removeAll()
         var samplefreq = 0
         (samplefreq, baodata) = notification.object as! (Int,[UInt8])
         FirstViewController.SAMPLERATE = samplefreq
@@ -559,8 +572,7 @@ class FirstViewController: UIViewController ,NskAlgoSdkDelegate{
         }
         self.alldata = analysisdata(data: alldata)
         self.baodata.removeAll()
-        self.ECGSensorlist.removeAll()
-        self.Sensorlist.removeAll()
+
 
     }
 
@@ -576,7 +588,7 @@ class FirstViewController: UIViewController ,NskAlgoSdkDelegate{
                 if alldata.count>=16{
                     for m  in 0 ..< 8{
                         var perdata =  (Int16(alldata[m*2+1]) & 0xff) << 8  | ((Int16(alldata[m*2]) & 0xff))//将两个8位数据组合
-                        self.ECGSensorlist.append(Int(perdata))
+
                         self.savedata.append(contentsOf: CommonUtils.Int2bigEndian(num: perdata))
                         if m < 5 {
                             if  rawindex >= 5120{
@@ -596,19 +608,31 @@ class FirstViewController: UIViewController ,NskAlgoSdkDelegate{
                                 self.ECGlist.append(Int(perdata))
                             }
                            
-                            self.drawlist.append(Int(perdata))
-                            if FirstViewController.SAMPLERATE == 512{
-                                //reloadlineview()
-                                self.perform(#selector(reloadlineview), with: nil, afterDelay: 0.0018)
-                            }
-                            if FirstViewController.SAMPLERATE == 256{
-                                //reloadlineview()
-                                self.perform(#selector(reloadlineview), with: nil, afterDelay: 0.004)
-                            }
+                            //self.drawlist.append(Int(perdata))
+                            self.nownum += 1
+//                            if FirstViewController.SAMPLERATE == 512{
+//                                //reloadlineview()
+//                                self.perform(#selector(reloadlineview), with: nil, afterDelay: 1/512)
+//                            }
+//                            if FirstViewController.SAMPLERATE == 256{
+//                                //reloadlineview()
+//                                self.perform(#selector(reloadlineview), with: nil, afterDelay: 1/256)
+//                            }
+                           // drawprocess()
+                            
+//                            if drawTimer == nil{
+//                                if FirstViewController.SAMPLERATE == 512{
+//                                    drawTimer = Timer.scheduledTimer(timeInterval: 0.002, target: self, selector: #selector(drawprocess), userInfo: nil, repeats: true)
+//                                }
+//                                if FirstViewController.SAMPLERATE == 256{
+//                                    drawTimer = Timer.scheduledTimer(timeInterval: 0.004, target: self, selector: #selector(drawprocess), userInfo: nil, repeats: true)
+//                                }
+//
+//                            }
 
                             
                         }else{
-                            self.Sensorlist.append(Int(perdata))
+
                         }
                     }
                     
@@ -623,10 +647,13 @@ class FirstViewController: UIViewController ,NskAlgoSdkDelegate{
                 return alldata
     }
     //绘制心电图
-    func reloadlineview(){
-         nownum += 1
-        self.drawlineview.adddata(perdata: drawlist.first!)
-        drawlist.removeFirst()
+    func drawprocess(_ sender : Any){
+        self.drawnum += 1
+        self.drawlineview.adddata(perdata: sender as! Int)
+//        if drawlist.count > 0{
+//             self.drawlineview.adddata(perdata: sender as! Int)
+//             drawlist.removeFirst()
+//        }
     }
     
     //保存数据到数据库和文件中
@@ -636,10 +663,10 @@ class FirstViewController: UIViewController ,NskAlgoSdkDelegate{
         
         //先上传数据
         if savedata.count >= 512{
-            var enddate = Date()
+            let enddate = Date()
             if BleTools.bindperipheral != nil{
                 if AppDelegate.netstyle != .notReachable{
-                    var filedata = savedata
+                    let filedata = savedata
                     netUtil.sharedInstance.uploadECGfile(startdate:startdate , enddate: enddate, mode: 1, bodyStatus: 1, deviceSN: BleTools.DEVICEMAC, phone: FirstViewController.phone, deviceType: 1, filedata: filedata, logFiledata: nil, signalQualityFile: nil,frequency: FirstViewController.SAMPLERATE)
                     savedata.removeAll()
                 }else{
@@ -677,7 +704,7 @@ class FirstViewController: UIViewController ,NskAlgoSdkDelegate{
                 var eeg_data : [Int16] = [Int16(algodata[rawindex])]
                 self.alogsdk.dataStream(.ECG, data: &eeg_data, length: 1)
                  rawindex += 1
-                
+               
               }
             usleep(200)
         }
@@ -705,10 +732,19 @@ class FirstViewController: UIViewController ,NskAlgoSdkDelegate{
                 break
             }
         }
+        switch ecg_value_type {
+        case .ecgValueTypeSmoothed:
+            //drawlist.append(ecg_valid.intValue)
+            //self.perform(#selector(self.drawprocess), with: nil, afterDelay: 0)
+            self.performSelector(onMainThread: #selector(self.drawprocess(_:)), with: ecg_valid.intValue, waitUntilDone: false)
+        default :
+            break
+        }
         
     }
     var signalquality : NskAlgoSignalQuality = .poor
     func ecgHRVFDAlgoValue(_ hf: NSNumber!, lf: NSNumber!, lfhf_ratio: NSNumber!, hflf_ratio: NSNumber!) {
+        print(String.init(format: "%d,%d,%d,%d", hf,lf,lfhf_ratio,hflf_ratio))
  
     }
     func ecgHRVTDAlgoValue(_ nn50: NSNumber!, sdnn: NSNumber!, pnn50: NSNumber!, rrTranIndex: NSNumber!, rmssd: NSNumber!) {
@@ -720,6 +756,7 @@ class FirstViewController: UIViewController ,NskAlgoSdkDelegate{
     func overallSignalQuality(_ signalQuality: NSNumber!) {
         
     }
+    
     
     func removeNotification(){
         addtimer.invalidate()

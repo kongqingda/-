@@ -1033,7 +1033,6 @@
 				9D714EC51FA87F5300E86D4B /* RadarMarkerView.swift */,
 				9D714EC61FA87F5300E86D4B /* RadarMarkerView.xib */,
 				9D714EC71FA87F5300E86D4B /* XYMarkerView.swift */,
-				9D714ECC1FA8810300E86D4B /* xvalueFormatter.swift */,
 			);
 			path = Components;
 			sourceTree = SOURCE_ROOT;
@@ -1077,6 +1076,7 @@
 		9DAFC85C1F611E86002F24E9 /* myUtils */ = {
 			isa = PBXGroup;
 			children = (
+				9D714ECC1FA8810300E86D4B /* xvalueFormatter.swift */,
 				9DAFC8641F611ED7002F24E9 /* CommonUtils.swift */,
 			);
 			name = myUtils;

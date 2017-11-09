@@ -40,7 +40,7 @@ class DrawLineView: UIView {
 
         //绘制曲线
         let per_w = Double(viewwidth)/Double(widthmax)
-        context!.setLineWidth(1.5)
+        context!.setLineWidth(1.2)
         context!.move(to: CGPoint(x:0,y:viewheight/2))
         if drawData.count > 0 {
             var i : Double = 1

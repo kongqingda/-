@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/ThreeViewController.swift"
-            timestampString = "531829970.164416"
+            timestampString = "531912063.007661"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "212"
@@ -74,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/ThreeViewController.swift"
-            timestampString = "531829970.164702"
+            timestampString = "531912063.007743"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "381"
@@ -90,7 +90,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/ThreeViewController.swift"
-            timestampString = "531829970.164784"
+            timestampString = "531912063.007802"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "222"
@@ -106,7 +106,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/ThreeViewController.swift"
-            timestampString = "531829970.164855"
+            timestampString = "531912063.007856"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "187"
@@ -186,7 +186,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/MainController.swift"
-            timestampString = "531829970.172015"
+            timestampString = "531917234.746514"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "29"
@@ -202,12 +202,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/FirstViewController.swift"
-            timestampString = "531887505.00436"
+            timestampString = "531917234.746595"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "285"
-            endingLineNumber = "285"
+            startingLineNumber = "294"
+            endingLineNumber = "294"
             landmarkName = "didReceiveMemoryWarning()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/FirstViewController.swift"
+            timestampString = "531917234.749818"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "650"
+            endingLineNumber = "650"
+            landmarkName = "drawprocess(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x5fc3;&#x7535;&#x5b88;&#x62a4;/FirstViewController.swift"
+            timestampString = "531917234.750464"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "651"
+            endingLineNumber = "651"
+            landmarkName = "drawprocess(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

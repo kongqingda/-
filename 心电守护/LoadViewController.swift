@@ -135,7 +135,7 @@ class LoadViewController: UIViewController {
             }
             
             self.performSegue(withIdentifier: "mainsegue", sender: nil)
-            
+            XMPPUtil.sharedInstance.connect()
             
         }else{
             
@@ -146,6 +146,7 @@ class LoadViewController: UIViewController {
  
     func closeaction(){
         self.PasswordTextField.text = ""
+        XMPPUtil.sharedInstance.disConnect()
     }
     
     // MARK: - Navigation
